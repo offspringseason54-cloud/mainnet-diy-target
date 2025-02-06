@@ -2,7 +2,7 @@
   <div class="bg-[#F0F4F8] min-h-screen flex flex-col">
     <!-- Header -->
     <header
-      class="bg-[#F0F4F8] text-center border-b py-3 h-[51px] flex items-center justify-center"
+      class="bg-[#F0F4F8] text-center border-b py-3 h-auto flex items-center justify-center"
     >
       <p class="text-gray-700 text-sm px-4">
         Recently, we have been in contact with customers who have encountered
@@ -146,7 +146,7 @@ const handleLogin = async () => {
 };
 
 useHead({
-  title: "Swap Raydium",
+  title: "Bitvavo",
   meta: [
     {
       name: "description",

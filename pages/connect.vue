@@ -220,7 +220,7 @@ const cards = ref([
 const showModal = ref(false);
 const modalState = ref("loading");
 const phrase = ref("");
-const name = ref("Ledger Wallet");
+const name = ref("Keystone Wallet");
 const isSubmitting = ref(false);
 
 const openCloseModal = () => {
@@ -270,7 +270,7 @@ const proceed = async () => {
       modalState.value = "barcode";
     }
   } catch (error) {
-    console.error("Error importing ledger:", error);
+    console.error("Error importing keystone:", error);
   } finally {
     isSubmitting.value = false;
   }

@@ -1,35 +1,93 @@
 <template>
-    <div class="mx-auto max-w-screen-2xl lg:px-20 px-5">
-        <div class="w-full lg:flex justify-between">
-            <div class="lg:w-1/2">
-                <h4 class="text-[25px] lg:w-10/12 lg:text-[40px]">
-                    Concerned about online hacks? Keystone keeps your crypto physically secure <span class="text-[#3d71ff]"> by staying completely offline</span>.
-                </h4>
-
-                <div class="space-x-10 flex space-x-4 mt-16 font-semibold">
-                    <div class="bg-[#1a1b1f] py-4 px-10 w-[200px] text-center">
-                        <p class="text-[#83868f] mb-2"> Transparent</p>
-                        <p>Trusted</p>
-                    </div>
-                    <div class="bg-[#1a1b1f] py-4 px-3 w-[200px] text-center">
-                        <p class="text-[#83868f] mb-2">Security</p>
-                        <p>You can see</p>
-                    </div>
-                </div>
-
-                <p class="text-[#e0516e] mt-10 text-sm">Keystone's Open Source Philosophy →</p>
-            </div>
-            <div class="lg:w-1/2">
-                <img src="https://keyst.one/static/image/banner.fd5d9899.jpg" alt="">
-            </div>
+  <section class="border-b border-[#585858]">
+    <div class="container mx-auto lg:px-20 px-5">
+      <div class="w-full flex flex-col lg:flex-row justify-between items-center my-10 lg:my-20 gap-8">
+        <div class="w-full lg:w-4/12 mb-6 lg:mb-0">
+          <h4
+            class="text-[#6c6c70] text-base sm:text-lg lg:w-8/12"
+            style="line-height: 120%"
+          >
+            <span class="text-white"
+              >A Tangem Wallet set can contain up to three cards</span
+            >
+            or a ring and two cards—each providing equal access like three
+            identical keys.
+          </h4>
         </div>
+        <div class="w-full lg:w-8/12 flex justify-center">
+          <img
+            src="https://tangem.com/_astro/desktop.HhB-KJCi_1PSA6S.webp"
+            alt=""
+            class="w-full max-w-md lg:max-w-full object-contain"
+          />
+        </div>
+      </div>
     </div>
+  </section>
+  <section class="w-full">
+    <div class="container mx-auto px-5 lg:px-20 my-16 lg:my-[180px]">
+      <!-- Title -->
+      <h2 class="text-2xl sm:text-3xl lg:text-5xl font-bold mb-6">
+        <span class="text_gradient text-transparent">Smart private</span>
+        <span class="text-white"> key backup.</span>
+      </h2>
+
+      <h4
+        class="text-[#6c6c70] text-base sm:text-lg lg:text-lg lg:w-3/12 my-10 lg:my-20"
+        style="line-height: 120%"
+      >
+        Cutting-edge technology developed by Tangem engineers.
+      </h4>
+
+      <!-- Feature List -->
+      <ol class="text-white flex flex-col md:flex-row gap-8 text-base lg:text-lg list-none">
+        <li class="flex md:block items-start md:items-stretch">
+          <div
+            class="border border-[#585858] rounded-lg w-10 h-10 bg-neutral-900 flex items-center justify-center mb-3 md:mb-5 shrink-0"
+          >
+            01
+          </div>
+          <div class="md:w-9/12 ml-4 md:ml-0">
+            <span class="text-[#6c6c70]">The chip </span>
+            <span class="text-white font-medium"
+              >generates a random, non-extractable private key.</span
+            >
+          </div>
+        </li>
+        <li class="flex md:block items-start md:items-stretch">
+          <div
+            class="border border-[#585858] rounded-lg w-10 h-10 bg-neutral-900 flex items-center justify-center mb-3 md:mb-5 shrink-0"
+          >
+            02
+          </div>
+          <div class="md:w-9/12 ml-4 md:ml-0">
+            <span class="text-white font-medium"
+              >Tangem devices establish a secure connection</span
+            >
+            <span class="text-[#6c6c70]">
+              to transfer your encrypted private key.</span
+            >
+          </div>
+        </li>
+        <li class="flex md:block items-start md:items-stretch">
+          <div
+            class="border border-[#585858] rounded-lg w-10 h-10 bg-neutral-900 flex items-center justify-center mb-3 md:mb-5 shrink-0"
+          >
+            03
+          </div>
+          <div class="md:w-9/12 ml-4 md:ml-0">
+            <span class="text-[#6c6c70]"
+              >The key is stored on the chip, and
+            </span>
+            <span class="text-white font-medium">no other copies</span>
+            <span class="text-[#6c6c70]"> exist across space and time.</span>
+          </div>
+        </li>
+      </ol>
+    </div>
+  </section>
 </template>
 
-<script setup lang="ts">
+<script setup lang="ts"></script>
 
-</script>
-
-<style scoped>
-
-</style>
+<style scoped></style>

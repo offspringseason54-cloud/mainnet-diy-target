@@ -1,36 +1,56 @@
 <template>
-    <section
-      class="relative bg-cover bg-center h-[700px] lg:h-[1056px] flex items-center"
-      style="background-image: url('https://keyst.one/static/image/banner.22838e42.jpg');"
-    >
-      <div class="container mx-auto px-5 lg:px-20">
-        <div class="text-white lg:w-1/2">
-          <p class="uppercase text-[#85efee] text-sm lg:text-lg mb-4">
-            MetaMask official partner cold wallet
-          </p>
-          <h1 class="text-[30px] lg:text-[56px] mb-6 leading-normal" >
-            Secure Cold Wallet for Effortless Transactions
-          </h1>
-          <p class="text-sm lg:text-base mb-8 text-neutral-300">
-            Keystone offers seamless compatibility with leading wallets such as 🦊 MetaMask, OKX Wallet, Tonkeeper, Solflare, Backpack, Blue, Keplr, Eternl, Zashi and others, ensuring top-tier security for a wide range of cryptocurrencies, including Bitcoin and Ethereum.
-          </p>
-          <div class="flex space-x-4">
-            <a
-              href="/connect"
-              class="b text-white py-2 lg:py-4 px-8 rounded font-semibold transition"
-              style="border: 2px solid; border-image: linear-gradient(90deg, #ffc93d 25%, #11a0de 50%, #b439d2 75%, #6b38fb 100%) 1;"
-            >
-              Connect
-            </a>
-            
-          </div>
-        </div>
+  <section class="relative bg-black overflow-hidden">
+    <!-- Video Hero -->
+    <div class="w-full flex justify-center items-end relative z-10 h-[400px] lg:h-[600px]">
+      <video
+        src="/video/hero-scanning.mp4"
+        autoplay
+        muted
+        playsinline
+        :controls="false"
+        class="w-full object-cover max-w-5xl h-[350px] sm:h-[400px] lg:h-[500px]"
+        style="pointer-events: none;"
+        preload="auto"
+      ></video>
+    </div>
+    <!-- Title and Content -->
+    <div class="relative z-20 -mt-16 sm:-mt-24 lg:-mt-32 flex flex-col items-center text-center px-4 mb-20">
+      <h1 class="text-4xl md:text-[96px] font-bold mb-4" style="line-height: 100%;">
+        <span class="text_gradient">Tangem</span>
+        <span class="text_white"> — Your Secure Crypto &amp; Hardware Wallet</span>
+      </h1>
+      <p class="hero__caption text_center text-base sm:text-lg lg:text-xl text-neutral-300 max-w-2xl mb-6">
+        Slim as a bank card, secure as a bank vault. Store, buy, earn, transfer and swap thousands of coins and tokens.
+      </p>
+      <div class="hero__buy flex flex-col sm:flex-row items-center gap-4 mb-2">
+        
+        <a href="/connect" class="btn-primary"> Connect Tangem </a>
       </div>
-    </section>
-  </template>
-  
-  <script setup lang="ts"></script>
-  
-  <style scoped>
-  /* Add any additional styles if needed */
-  </style>
+    </div>
+  </section>
+</template>
+
+<script setup lang="ts"></script>
+
+<style scoped>
+.text_gradient {
+  background: linear-gradient(90deg,#525255,#f0f0f0);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+.text_white {
+  color: #fff;
+}
+.hero__caption.text_center {
+  text-align: center;
+}
+.button_primary {
+  transition: background 0.3s;
+}
+@media (max-width: 640px) {
+  .hero__title {
+    font-size: 96px
+  }
+}
+</style>

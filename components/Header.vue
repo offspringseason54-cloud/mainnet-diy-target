@@ -12,7 +12,7 @@
         </div>
 
         <a
-          href="/en/pricing/?promocode=JULY-UP"
+          href="/"
           class="text-[#f8f32b] whitespace-nowrap font-medium hover:underline"
         >
           Shop now

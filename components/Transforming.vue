@@ -54,7 +54,7 @@
     <!-- CTA Button -->
     <div class="text-center mt-12">
       <a
-        href="/updates"
+        href="/"
         class="inline-block px-6 py-3 bg-gradient-to-r from-purple-600 to-indigo-600 text-white rounded-xl text-sm md:text-base font-semibold hover:opacity-90 transition"
       >
         View all Updates

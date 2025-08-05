@@ -10,7 +10,7 @@
 
       <div class="text-center mt-12">
         <a
-          href="/updates"
+          href="/"
           class="inline-block px-6 py-3 bg-gradient-to-r from-purple-600 to-indigo-600 text-white rounded-xl text-sm md:text-base font-semibold hover:opacity-90 transition"
         >
           Join our Community
@@ -34,7 +34,7 @@
         </h3>
 
         <a
-          href="/updates"
+          href="/"
           style="border: 2px solid hsla(0,0%,100%,.1)"
           class="inline-block mt-10 px-4 py-2 text-[#7376aa] rounded-xl text-sm md:text-base hover:opacity-90 transition"
         >

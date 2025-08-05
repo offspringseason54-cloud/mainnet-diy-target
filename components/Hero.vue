@@ -19,7 +19,7 @@
     <div class="relative z-20 -mt-16 sm:-mt-24 lg:-mt-32 flex flex-col items-center text-center px-4 mb-20">
       <h1 class="text-4xl md:text-[96px] font-bold mb-4" style="line-height: 100%;">
         <span class="text_gradient">Lightchain Protocol</span>
-        <span class="text_white"> — Bridging AI with</span>
+        <span class="text_white"> — Bridging AI with Blockchain</span>
       </h1>
       <p class="hero__caption text_center text-base sm:text-lg lg:text-xl text-neutral-300 max-w-2xl mb-6">
         Revolutionizing intelligence through decentralized innovation.

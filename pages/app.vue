@@ -16,11 +16,14 @@
             <h3
               class="cs-section_title cs-font_16 cs-font_14_sm cs-gradient_color"
             >
-              Issues to Resolve
+              Mainnet DIY Services
             </h3>
             <h2 class="cs-section_subtitle cs-m0 cs-font_36 cs-font_24_sm">
-              Our Services
+              Self-Serve Web3 Solutions
             </h2>
+            <p class="cs-section_description cs-m0 cs-font_18 cs-font_16_sm cs-body_line_height" style="margin-top: 15px;">
+              Take control of your crypto journey with Mainnet DIY's comprehensive toolkit. From wallet connections to blockchain recovery, we provide the tools and guidance you need to resolve issues independently.
+            </p>
           </div>
           <br /><br />
 
@@ -28,13 +31,13 @@
             <div class="cs-iconbox cs-style1 cs-type1 text-center cs-light_bg">
               <div class="cs-height_20 cs-height_lg_20"></div>
               <h3 class="cs-iconbox_title cs-font_24 cs-font_20_sm cs-m0">
-                Blockchain Recovery
+                Mainnet DIY Blockchain Recovery
               </h3>
               <div class="cs-height_10 cs-height_lg_10"></div>
               <div class="cs-iconbox_subtitle">
-                Accidentally sent funds to the wrong address? Our platform
+                Accidentally sent funds to the wrong address? Mainnet DIY's self-serve platform
                 facilitates blockchain recovery, helping you retrieve your lost
-                or stuck transactions securely.
+                or stuck transactions securely with step-by-step guidance.
               </div>
               <br />
               <a
@@ -50,7 +53,7 @@
             <div class="cs-iconbox cs-style1 cs-type1 text-center cs-light_bg">
               <div class="cs-height_20 cs-height_lg_20"></div>
               <h3 class="cs-iconbox_title cs-font_24 cs-font_20_sm cs-m0">
-                Crypto Wallet Restoration
+                Mainnet DIY Wallet Restoration
               </h3>
               <div class="cs-height_10 cs-height_lg_10"></div>
               <div class="cs-iconbox_subtitle">
@@ -94,7 +97,7 @@
             <div class="cs-iconbox cs-style1 cs-type1 text-center cs-light_bg">
               <div class="cs-height_20 cs-height_lg_20"></div>
               <h3 class="cs-iconbox_title cs-font_24 cs-font_20_sm cs-m0">
-                Wallet integration
+                Mainnet DIY Wallet Integration
               </h3>
               <div class="cs-height_10 cs-height_lg_10"></div>
               <div class="cs-iconbox_subtitle">
@@ -911,11 +914,11 @@
 
 <script setup>
 useHead({
-  title: 'Web3 dapp resolver',
+  title: 'Mainnet DIY',
   meta: [
     {
       name: 'description',
-      content: 'Resolve Web3 dApp issues with our comprehensive blockchain troubleshooting platform. Connect wallets, fix transaction problems, and optimize your decentralized application experience.'
+      content: 'Mainnet DIY helps you take charge of your crypto journey — learn, troubleshoot, and execute on-chain tasks with a clean, guided experience.'
     }
   ]
 })

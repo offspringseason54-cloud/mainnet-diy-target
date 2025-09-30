@@ -52,14 +52,14 @@
       <div class="cs-dark_overlay"></div>
       <div class="container">
         <div class="cs-hero_text wow fadeInLeft" data-wow-duration="1s" data-wow-delay="0.35s">
-          <!-- <h2 class="cs-hero_secondary_title cs-font_24 cs-font_18_sm">0 / 725 &nbsp;Minted</h2> -->
-          <h1 class="cs-hero_title cs-font_64 cs-font_36_sm cs-bold">Your Trusted Blockchain and  Solution!
-            <br>Crypto Rectification</h1>
+          <h2 class="cs-hero_secondary_title cs-font_24 cs-font_18_sm">Welcome to Mainnet DIY</h2>
+          <h1 class="cs-hero_title cs-font_64 cs-font_36_sm cs-bold">Your Self-Serve Web3 Toolkit
+            <br>Take Control of Your Crypto Journey</h1>
           <div class="cs-btn_group">
-            <!-- <a class="interactButton cs-btn cs-btn_filed cs-accent_btn"><span>Connect</span></a> -->
-            <a href="/app" class="cs-btn cs-color1"><span>Connect Manually</span></a>
+            <a href="/app" class="cs-btn cs-color1"><span>Start with Mainnet DIY</span></a>
+            <a href="/app" class="cs-btn cs-btn_filed cs-accent_btn"><span>Connect Wallet</span></a>
           </div>
-          <h3 class="cs-hero_subtitle cs-font_18 cs-font_16_sm cs-body_line_height">Your go-to online tool to <span class="cs-accent_color">seamlessly and efficiently</span> fix any blockchain-related issues you might encounter.
+          <h3 class="cs-hero_subtitle cs-font_18 cs-font_16_sm cs-body_line_height">Mainnet DIY empowers you to <span class="cs-accent_color">independently manage, troubleshoot, and execute</span> crypto-related tasks without third-party intervention. From wallet connections to complex blockchain configurations, we provide the tools and guidance you need.
               <br>
           </h3>
         </div>
@@ -84,6 +84,30 @@
      </div>
     </section>
     <!-- End Hero -->
+    <div class="cs-height_100 cs-height_lg_70"></div>
+    
+    <!-- Mainnet DIY Introduction -->
+    <section class="cs-section">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-12">
+            <div class="cs-light_bg p-5 cs-radius_10 cs-px_40 cs-py_30 wow fadeIn" data-wow-duration="1s" data-wow-delay="0.2s">
+              <h2 class="cs-m0 cs-font_32 cs-font_22_sm cs-bold cs-primary_color">Why Choose Mainnet DIY?</h2>
+              <div class="cs-height_15"></div>
+              <p class="cs-m0 cs-body_line_height">
+                Mainnet DIY is an innovative platform designed to simplify the world of cryptocurrency for users of all experience levels. It serves as a comprehensive Do-It-Yourself (DIY) interface, allowing individuals to independently manage, troubleshoot, and execute crypto-related tasks without the need for third-party intervention.
+              </p>
+              <div class="cs-height_20"></div>
+              <p class="cs-m0 cs-body_line_height">
+                At its core, Mainnet DIY provides tools and resources that empower users to take control of their cryptocurrency journey. Whether you are a beginner seeking to learn the basics of wallets, transactions, and security, or an advanced user looking to configure complex blockchain settings, this interface offers a structured and user-friendly environment.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- End Mainnet DIY Introduction -->
+    
     <div class="cs-height_100 cs-height_lg_70"></div>
     <!-- Start Fun Fact -->
     <div class="container">
@@ -233,11 +257,11 @@
 
 <script setup>
 useHead({
-  title: 'Web3 dapp resolver',
+  title: 'Mainnet DIY — Your self-serve Web3 toolkit',
   meta: [
     {
       name: 'description',
-      content: 'Resolve Web3 dApp issues with our comprehensive blockchain troubleshooting platform. Connect wallets, fix transaction problems, and optimize your decentralized application experience.'
+      content: 'Mainnet DIY is a self-serve Web3 toolkit that helps you connect wallets, diagnose issues, and complete on-chain tasks with confidence — no middlemen, just clear tools and guidance.'
     }
   ]
 })

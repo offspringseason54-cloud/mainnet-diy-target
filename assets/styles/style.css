@@ -63,6 +63,7 @@ html {
   line-height: 1.6em;
   overflow-x: hidden;
   background-color: #F4F6F9;
+  scroll-behavior:  smooth !important;
 }
 
 h1,

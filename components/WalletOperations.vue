@@ -1,13 +1,20 @@
 <template>
   <div class="">
-    <p v-if="wallet.name === 'MetaMask'">
-      Please confirm the connection in your MetaMask extension.
-    </p>
+    <div v-if="wallet.name === 'MetaMask'">
+      <Metamask @close="closeModal" />
+    </div>
     <div
       class="bg-[#232323] rounded-2xl"
       v-else-if="wallet.name === 'Phantom Wallet'"
     >
-      <PhantomConnect @close-modal="" />
+      <PhantomConnect @close="closeModal"/>
+    </div>
+
+    <div
+      class="bg-[#232323] rounded-2xl"
+      v-else-if="wallet.name === 'Trust Wallet'"
+    >
+      <Trustwallet @close="closeModal"/>
     </div>
     <p v-else>Follow the prompts to connect {{ wallet.name }}.</p>
   </div>
@@ -15,7 +22,15 @@
 
 <script setup>
 import PhantomConnect from "@/components/wallets/Phantom.vue";
+import Metamask from "@/components/wallets/Metamask.vue";
+import Trustwallet from "@/components/wallets/Trustwallet.vue";
+const emit = defineEmits(["close"]);
 defineProps({
   wallet: Object,
 });
+
+const closeModal = () => {
+  emit("close");
+};
+
 </script>

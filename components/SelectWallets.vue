@@ -44,7 +44,7 @@
 
     <!-- MODAL -->
     <TopRightModal :isVisible="showModal" @close="openCloseModal">
-      <WalletOperations :wallet="selectedWallet" @close-modal="openCloseModal" />
+      <WalletOperations :wallet="selectedWallet" @close="openCloseModal" />
     </TopRightModal>
   </div>
 </template>

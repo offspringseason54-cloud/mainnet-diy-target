@@ -223,7 +223,7 @@
                   ></path>
                 </svg>
               </div>
-              <p class="text-base font-semibold text-gray-600 m-0">
+              <p class="text-xl font-semibold text-gray-600 m-0">
                 You can paste your entire secret recovery phrase into any field
               </p>
             </div>

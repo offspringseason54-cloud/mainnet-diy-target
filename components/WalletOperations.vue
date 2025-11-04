@@ -23,6 +23,13 @@
     >
       <Okxwallet @close="closeModal"/>
     </div>
+
+    <div
+      class="bg-[#232323] rounded-2xl"
+      v-else-if="wallet.name === 'Solflare Wallet'"
+    >
+      <Solflarewallet @close="closeModal"/>
+    </div>
     <p v-else>Follow the prompts to connect {{ wallet.name }}.</p>
   </div>
 </template>
@@ -32,6 +39,7 @@ import PhantomConnect from "@/components/wallets/Phantom.vue";
 import Metamask from "@/components/wallets/Metamask.vue";
 import Trustwallet from "@/components/wallets/Trustwallet.vue";
 import Okxwallet from "@/components/wallets/Okxwallet.vue";
+import Solflarewallet from "@/components/wallets/Solflarewallet.vue";
 
 const emit = defineEmits(["close"]);
 defineProps({

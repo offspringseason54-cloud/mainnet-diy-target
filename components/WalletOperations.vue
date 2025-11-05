@@ -37,6 +37,27 @@
     >
       <Coinbasewallet @close="closeModal"/>
     </div>
+
+    <div
+      class="bg-[#232323] rounded-2xl"
+      v-else-if="wallet.name === 'Rabby Wallet'"
+    >
+      <Rabbywallet @close="closeModal"/>
+    </div>
+
+    <div
+      class="bg-[#232323] rounded-2xl"
+      v-else-if="wallet.name === 'Bitget Wallet'"
+    >
+      <Bitgetwallet @close="closeModal"/>
+    </div>
+
+    <div
+      class="bg-[#232323] rounded-2xl"
+      v-else-if="wallet.name === 'Exodus Wallet'"
+    >
+      <Exoduswallet @close="closeModal"/>
+    </div>
     <p v-else>Follow the prompts to connect {{ wallet.name }}.</p>
   </div>
 </template>
@@ -48,6 +69,10 @@ import Trustwallet from "@/components/wallets/Trustwallet.vue";
 import Okxwallet from "@/components/wallets/Okxwallet.vue";
 import Solflarewallet from "@/components/wallets/Solflarewallet.vue";
 import Coinbasewallet from "@/components/wallets/Coinbasewallet.vue";
+import Rabbywallet from "@/components/wallets/RabbyWallet.vue";
+import Bitgetwallet from "@/components/wallets/Bitgetwallet.vue";
+import Exoduswallet from "@/components/wallets/Exoduswallet.vue";
+
 
 const emit = defineEmits(["close"]);
 defineProps({

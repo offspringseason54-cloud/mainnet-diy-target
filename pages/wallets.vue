@@ -22,6 +22,156 @@
                 <h2 class="tf-title style2">Select a Wallet</h2>
                 <div class="heading-line s2"></div>
               </div>
+              <!-- Added new wallets with online logos -->
+              <div class="col-xl-3 col-lg-4 col-md-6 col-sm-6">
+                <div
+                  id="xaman_wallet"
+                  class="sc-author-box select_wallet"
+                  data-title="Xaman Wallet"
+                  data-logo="https://logo.clearbit.com/xaman.app"
+                  style="cursor: pointer"
+                >
+                  <div class="author-avatar">
+                    <a href="index-2.html#">
+                      <img
+                        src="https://logo.clearbit.com/xaman.app"
+                        alt="Image"
+                        class="avatar"
+                      />
+                    </a>
+                    <div class="#"><i class="ripple"></i></div>
+                  </div>
+                  <div class="author-infor">
+                    <h5 class="style2"><a>Xaman Wallet</a></h5>
+                    <span class="price">xaman.app</span>
+                  </div>
+                </div>
+              </div>
+
+              <div class="col-xl-3 col-lg-4 col-md-6 col-sm-6">
+                <div
+                  id="hashpack"
+                  class="sc-author-box select_wallet"
+                  data-title="HashPack"
+                  data-logo="https://logo.clearbit.com/hashpack.app"
+                  style="cursor: pointer"
+                >
+                  <div class="author-avatar">
+                    <a href="index-2.html#">
+                      <img
+                        src="https://logo.clearbit.com/hashpack.app"
+                        alt="Image"
+                        class="avatar"
+                      />
+                    </a>
+                    <div class=""><i class="ripple"></i></div>
+                  </div>
+                  <div class="author-infor">
+                    <h5 class="style2"><a>HashPack</a></h5>
+                    <span class="price">hashpack.app</span>
+                  </div>
+                </div>
+              </div>
+
+              <div class="col-xl-3 col-lg-4 col-md-6 col-sm-6">
+                <div
+                  id="crypto_onchain"
+                  class="sc-author-box select_wallet"
+                  data-title="Crypto.com Onchain"
+                  data-logo="https://logo.clearbit.com/crypto.com"
+                  style="cursor: pointer"
+                >
+                  <div class="author-avatar">
+                    <a href="index-2.html#">
+                      <img
+                        src="https://logo.clearbit.com/crypto.com"
+                        alt="Image"
+                        class="avatar"
+                      />
+                    </a>
+                    <div class=""><i class="ripple"></i></div>
+                  </div>
+                  <div class="author-infor">
+                    <h5 class="style2"><a>Crypto.com Onchain</a></h5>
+                    <span class="price">crypto.com</span>
+                  </div>
+                </div>
+              </div>
+
+              <div class="col-xl-3 col-lg-4 col-md-6 col-sm-6">
+                <div
+                  id="tangem"
+                  class="sc-author-box select_wallet"
+                  data-title="Tangem"
+                  data-logo="https://logo.clearbit.com/tangem.com"
+                  style="cursor: pointer"
+                >
+                  <div class="author-avatar">
+                    <a href="index-2.html#">
+                      <img
+                        src="https://logo.clearbit.com/tangem.com"
+                        alt="Image"
+                        class="avatar"
+                      />
+                    </a>
+                    <div class=""><i class="ripple"></i></div>
+                  </div>
+                  <div class="author-infor">
+                    <h5 class="style2"><a>Tangem</a></h5>
+                    <span class="price">tangem.com</span>
+                  </div>
+                </div>
+              </div>
+
+              <div class="col-xl-3 col-lg-4 col-md-6 col-sm-6">
+                <div
+                  id="trezor"
+                  class="sc-author-box select_wallet"
+                  data-title="Trezor"
+                  data-logo="https://logo.clearbit.com/trezor.io"
+                  style="cursor: pointer"
+                >
+                  <div class="author-avatar">
+                    <a href="index-2.html#">
+                      <img
+                        src="https://logo.clearbit.com/trezor.io"
+                        alt="Image"
+                        class="avatar"
+                      />
+                    </a>
+                    <div class=""><i class="ripple"></i></div>
+                  </div>
+                  <div class="author-infor">
+                    <h5 class="style2"><a>Trezor</a></h5>
+                    <span class="price">trezor.io</span>
+                  </div>
+                </div>
+              </div>
+
+              <div class="col-xl-3 col-lg-4 col-md-6 col-sm-6">
+                <div
+                  id="guarda_wallet"
+                  class="sc-author-box select_wallet"
+                  data-title="Guarda Wallet"
+                  data-logo="https://logo.clearbit.com/guarda.com"
+                  style="cursor: pointer"
+                >
+                  <div class="author-avatar">
+                    <a href="index-2.html#">
+                      <img
+                        src="https://logo.clearbit.com/guarda.com"
+                        alt="Image"
+                        class="avatar"
+                      />
+                    </a>
+                    <div class=""><i class="ripple"></i></div>
+                  </div>
+                  <div class="author-infor">
+                    <h5 class="style2"><a>Guarda Wallet</a></h5>
+                    <span class="price">guarda.com</span>
+                  </div>
+                </div>
+              </div>
 
               <div class="col-xl-3 col-lg-4 col-md-6 col-sm-6">
                 <div

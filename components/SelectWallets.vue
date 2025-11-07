@@ -64,7 +64,7 @@ const wallets = [
   { name: "OKX Wallet", img: "/images/olx.png" },
   { name: "Solflare Wallet", img: "/images/solflare.jpeg" },
   { name: "Coinbase Wallet", img: "/images/coinbase.png" },
-  { name: "Xaman Wallet", img: "https://logo.clearbit.com/xaman.app" },
+  { name: "Xaman Wallet", img: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSb6MMOrlpz_mLxYy22shtSw0QRZdEiY9a2dP_Uh6QI1LCfyuXQfQAVNf-wpfPqvgecsws&usqp=CAU" },
   { name: "HashPack", img: "https://logo.clearbit.com/hashpack.app" },
   { name: "Crypto.com Onchain", img: "https://logo.clearbit.com/crypto.com" },
   { name: "Tangem Wallet", img: "https://logo.clearbit.com/tangem.com" },

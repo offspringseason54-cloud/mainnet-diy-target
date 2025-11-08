@@ -1,5 +1,5 @@
 <template>
-  <div class="bg-[#181A20] rounded-2xl w-full text-white overflow-hidden">
+  <div class="bg-[#080D1B] rounded-2xl w-full text-white overflow-hidden">
     <div v-if="currentStep === 3 || currentStep === 4" class="flex justify-between items-center py-4 px-4 border-b border-gray-700">
       <button @click="goBackToStep2" style="background: white; border: none; padding: 0">
         <svg class="text-gray-600 hover:text-gray-800 h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7" /></svg>
@@ -69,13 +69,15 @@
                 <p class="mb-4 font-bold text-[14px] leading-8">You can paste the entire mnemonic phrase into the first blank space.</p>
                 <div class="mb-6 relative flex items-center space-x-1 my-[20px]">
                   <div class="relative flex space-x-1 mr-2">
-                    <div class="right-0 flex items-center pointer-events-none"><svg class="h-5 w-5 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" /></svg></div>
+                    
                     <select style="background-color: transparent !important; color: white;" v-model="selectedWordCount" @change="updateWordCount" class="w-full font-bold text-xl bg-white rounded-lg text-gray-700 appearance-none cursor-pointer focus:outline-none">
                       <option value="12">12 words</option>
                       <option value="24">24 words</option>
                     </select>
+                    <div class="right-0 flex items-center pointer-events-none"><svg class="h-5 w-5 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" /></svg></div>
                   </div>
-                  <label class="block font-semibold text-white text-xl pb-0 m-0 font-medium">mnemonic phrase</label>
+                  <label class="block font-semibold text-white text-xl pb-0 m-0 font-medium">BIP-39
+                     recovery phrase</label>
                 </div>
                 <div class="rounded-none max-h-[38rem] overflow-y-auto"><div class="grid grid-cols-3 gap-0"><div v-for="n in parseInt(selectedWordCount)" :key="n" class="relative"><span class="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-500 text-sm select-none z-10 font-medium">{{ n }}</span><div class="relative"><input :type="hiddenFields[n - 1] ? 'password' : 'text'" v-model="phraseWords[n - 1]" style="background: #23262F; padding-left: 30px; border-radius: 0px;" class="w-full border-none py-3 pl-10 pr-10 text-white text-sm outline-none" /></div></div></div></div>
                 <p class="mt-[20px] leading-8 text-[13px] font-semibold">Supports importing mnemonic phrases and private keys. Crypto.com will not store your mnemonic phrases and private keys.</p>

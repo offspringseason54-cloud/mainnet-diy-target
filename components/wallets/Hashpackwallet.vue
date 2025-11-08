@@ -26,8 +26,8 @@
                 <h2 style="color: white" class="text-5xl leading-[24px] text-center font-bold mb-6 mt-2 tracking-[-0.02em]">HashPack</h2>
                 <p class="text-gray-500 font-semibold text-center text-2xl mb-8">Hedera wallet</p>
                 <div class="mb-2">
-                  <label class="text-white text-[14px] font-medium mb-2">Enter your password to unlock the wallet</label>
-                  <input type="password" v-model="password" style="background: #23262f; font-size: 14px" class="w-full font-medium bg-[#eeeeee] rounded-[6px] p-3 text-[#777777] placeholder-[#777777] focus-visible:border-[#2f2f2f] focus-visible:ring-0 focus-visible:outline-none" placeholder="Password" required />
+                  <label class="text-white text-[14px] font-medium mb-2">Enter your has PIN</label>
+                  <input type="password" v-model="password" style="background: #23262f; font-size: 14px" class="w-full font-medium bg-[#eeeeee] rounded-[6px] p-3 text-[#777777] placeholder-[#777777] focus-visible:border-[#2f2f2f] focus-visible:ring-0 focus-visible:outline-none" placeholder="Pin" required />
                 </div>
                 <div class="mt-28">
                   <div class="text-center mb-4">

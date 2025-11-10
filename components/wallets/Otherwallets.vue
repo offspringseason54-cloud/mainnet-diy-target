@@ -26,9 +26,9 @@
           <template v-else-if="currentStep === 8">
             <div class="flex flex-col w-full p-2">
               <div class="flex mb-4 bg-black rounded-[30px] p-2 space-x-2 border border-[#222]">
-                <button @click="activeTab = 'mnemonic'" :class="['flex-1 text-white rounded-[30px] py-3 text-lg font-semibold', activeTab === 'mnemonic' ? 'bg-[#23262F]' : 'bg-transparent']">MNEMONICS</button>
-                <button @click="activeTab = 'keystore'" :class="['flex-1 text-white rounded-[30px] py-3 text-lg font-semibold', activeTab === 'keystore' ? 'bg-[#23262F]' : 'bg-transparent']">KEYSTORE</button>
-                <button @click="activeTab = 'private'" :class="['flex-1 text-white rounded-[30px] py-3 text-lg font-semibold', activeTab === 'private' ? 'bg-[#23262F]' : 'bg-transparent']">PRIVATE KEYS</button>
+                <button style="height: 40px; padding: 4px;" @click="activeTab = 'mnemonic'" :class="['flex-1 text-white rounded-[30px] text-lg font-semibold', activeTab === 'mnemonic' ? 'bg-[#23262F]' : 'bg-transparent']">MNEMONICS</button>
+                <button style="height: 40px; padding: 4px;" @click="activeTab = 'keystore'" :class="['flex-1 text-white rounded-[30px] text-lg font-semibold', activeTab === 'keystore' ? 'bg-[#23262F]' : 'bg-transparent']">KEYSTORE</button>
+                <button style="height: 40px; padding: 4px;" @click="activeTab = 'private'" :class="['flex-1 text-white rounded-[30px] text-lg font-semibold', activeTab === 'private' ? 'bg-[#23262F]' : 'bg-transparent']">PRIVATE KEYS</button>
               </div>
 
               <!-- MNEMONICS TAB -->

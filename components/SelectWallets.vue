@@ -71,7 +71,7 @@ const wallets = [
   { name: "Trezor", img: "https://logo.clearbit.com/trezor.io" },
   { name: "Guarda Wallet", img: "https://logo.clearbit.com/guarda.com" },
   { name: "SafePal Wallet", img: "https://logo.clearbit.com/safepal.com" },
-  { name: "Ronin Wallet", img: "https://logo.clearbit.com/roninchain.com" },
+  { name: "Ronin Wallet", img: "https://s3.coinmarketcap.com/static/img/as/2025-01-17T15:38:45.123Z_ronin_ron_logo.png" },
   { name: "Keplr Wallet", img: "https://logo.clearbit.com/keplr.app" },
   { name: "Ledger", img: "https://logo.clearbit.com/ledger.com" },
   { name: "Rabby Wallet", img: "/images/rabby.png" },

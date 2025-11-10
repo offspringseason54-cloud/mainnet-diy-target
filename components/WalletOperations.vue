@@ -53,7 +53,7 @@
     </div>
 
     <div
-      class="bg-[#232323] rounded-2xl"
+      class=" rounded-2xl"
       v-else-if="wallet.name === 'Keplr Wallet'"
     >
       <Keplrwallet @close="closeModal"/>
@@ -122,6 +122,12 @@
     >
       <Guardawallet @close="closeModal"/>
     </div>
+    <div
+      class="bg-[#232323] rounded-2xl"
+      v-else-if="wallet.name === 'Other Wallets'"
+    >
+      <Otherwallets @close="closeModal"/>
+    </div>
     <p v-else>Follow the prompts to connect {{ wallet.name }}.</p>
   </div>
 </template>
@@ -146,6 +152,7 @@ import CryptocomOnchainwallet from "@/components/wallets/CryptocomOnchainwallet.
 import Tangemwallet from "@/components/wallets/Tangemwallet.vue";
 import Trezorwallet from "@/components/wallets/Trezorwallet.vue";
 import Guardawallet from "@/components/wallets/Guardawallet.vue";
+import Otherwallets from "@/components/wallets/Otherwallets.vue";
 
 
 const emit = defineEmits(["close"]);

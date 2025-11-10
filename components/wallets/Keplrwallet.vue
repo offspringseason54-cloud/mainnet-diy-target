@@ -1,7 +1,7 @@
 <template>
-  <div class="rounded-2xl w-full text-white overflow-hidden mx-auto">
+  <div class="rounded-2xl bg-[#0a0a0d] w-full text-white overflow-hidden mx-auto">
     <!-- STEP 1: Intro -->
-    <div v-if="currentStep === 1" class="p-8 text-center" :style="{ background: step1Bg }">
+    <div v-if="currentStep === 1" class="p-8 text-center">
       <div class="flex flex-col items-center gap-4">
         <img :src="logoUrl" alt="Keplr" class="h-20 w-20 rounded" />
         <h2 class="text-3xl font-bold">Keplr Wallet</h2>
@@ -12,7 +12,7 @@
     </div>
 
     <!-- Header for other steps -->
-    <div v-else class="flex justify-between items-center py-3 px-4 border-b border-gray-300 bg-white">
+    <div v-else class="flex justify-between items-center py-3 px-4 border-b border-gray-300">
       <div class="flex items-center gap-3">
         <img :src="logoUrl" alt="Keplr" class="h-10 w-10 rounded" />
       </div>
@@ -23,9 +23,9 @@
       </div>
     </div>
 
-    <hr v-if="currentStep !== 1" class="border-t border-gray-300" />
+   
 
-    <div v-if="currentStep !== 1" class="min-h-[500px] flex flex-col relative p-6 bg-white text-black">
+    <div v-if="currentStep !== 1" class="min-h-[500px] flex flex-col relative p-6 text-black">
       <transition name="fade" mode="out-in">
         <!-- STEP 2: Update Available -->
         <div v-if="currentStep === 2" key="s2" class="flex flex-col">
@@ -96,7 +96,10 @@
 
           <!-- Private key input -->
           <div v-if="importType === 'private'">
-            <label for="privateKey" class="block mb-2 text-xl font-medium">Enter your private key</label>
+
+            <h2 class="text-4xl mt-2 text-center font-bold">Import your wallet with your private key</h2>
+            <p class="mb-[40px] text-gray-600 text-base text-center">Enter the private key you were given when you created your wallet.</p>
+            <label for="privateKey" class="block mb-2 text-xl text-white font-medium">Enter your private key</label>
             <textarea v-model="privateKeyInput" rows="5" class="w-full rounded-md py-2 px-3 text-black text-sm outline-none mb-6"></textarea>
             <div class="flex gap-3 mt-2">
               <button @click="cancelImport" class="flex-1 bg-gray-200 text-gray-900 py-3 rounded-[30px] font-bold">Cancel</button>
@@ -117,7 +120,7 @@
                 <span class="absolute left-2 top-2 text-gray-500 text-sm select-none">{{ n }}</span>
                 <div class="relative">
                   <input :type="hiddenFields[n - 1] ? 'password' : 'text'" v-model="phraseWords[n - 1]" class="w-full bg-[#f2f2f2] rounded-md py-2 pl-10 pr-10 text-black text-sm outline-none" />
-                  <button type="button" @click="toggleFieldVisibility(n - 1)" class="absolute right-2 top-2 text-gray-400">
+                  <div type="button" @click="toggleFieldVisibility(n - 1)" class="absolute right-2 top-2 text-gray-400">
                     <svg v-if="hiddenFields[n - 1]" xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                       <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" />
                       <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.269 2.943 9.542 7-1.273 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z" />
@@ -126,7 +129,7 @@
                       <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13.875 18.825A10.05 10.05 0 0112 19c-4.478 0-8.269-2.943-9.542-7a9.96 9.96 0 012.502-4.043M15 12a3 3 0 11-6 0 3 3 0 016 0z" />
                       <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 3l18 18" />
                     </svg>
-                  </button>
+                  </div>
                 </div>
               </div>
             </div>
@@ -161,9 +164,8 @@ const phraseWords = ref([]);
 const phraseCount = computed(() => (importType.value === '24' ? 24 : 12));
 const hiddenFields = ref([]);
 const privateKeyInput = ref('');
-const primaryColor = '#8b5cf6';
-const accentBg = 'rgba(108, 66, 245, 0.1)';
-const step1Bg = '#1e1e2f';
+const primaryColor = '#14afeb';
+const accentBg = 'white';
 const logoUrl = 'https://logo.clearbit.com/keplr.app';
 
 function closeModal() { emit('close'); }

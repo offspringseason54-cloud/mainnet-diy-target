@@ -77,6 +77,10 @@ const wallets = [
   { name: "Rabby Wallet", img: "/images/rabby.png" },
   { name: "Bitget Wallet", img: "/images/bitget.jpeg" },
   { name: "Exodus Wallet", img: "/images/exodus.png" },
+  { name: "Zerion Wallet", img: "https://logo.clearbit.com/zerion.io" },
+  { name: "Kraken Wallet", img: "https://logo.clearbit.com/kraken.com" },
+  { name: "Atomic Wallet", img: "https://logo.clearbit.com/atomicwallet.io" },
+  { name: "Binance Web3 Wallet", img: "https://logo.clearbit.com/binance.com" },
   { name: "Other Wallets", img: "/images/all-wallets.png" },
 ];
 

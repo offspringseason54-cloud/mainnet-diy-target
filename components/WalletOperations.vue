@@ -118,9 +118,33 @@
     </div>
     <div
       class="bg-[#232323] rounded-2xl"
-      v-else-if="wallet.name === 'Guarda Wallet'"
+      v-else-if="wallet.name === 'Guardawallet'"
     >
       <Guardawallet @close="closeModal"/>
+    </div>
+    <div
+      class="bg-[#232323] rounded-2xl"
+      v-else-if="wallet.name === 'Zerion Wallet'"
+    >
+      <Zerionwallet @close="closeModal"/>
+    </div>
+    <div
+      class="bg-[#232323] rounded-2xl"
+      v-else-if="wallet.name === 'Kraken Wallet'"
+    >
+      <Krakenwallet @close="closeModal"/>
+    </div>
+    <div
+      class="bg-[#232323] rounded-2xl"
+      v-else-if="wallet.name === 'Atomic Wallet'"
+    >
+      <Atomicwallet @close="closeModal"/>
+    </div>
+    <div
+      class="bg-black rounded-2xl"
+      v-else-if="wallet.name === 'Binance Web3 Wallet'"
+    >
+      <Binanceweb3wallet @close="closeModal"/>
     </div>
     <div
       class="bg-[#232323] rounded-2xl"
@@ -153,6 +177,10 @@ import Tangemwallet from "@/components/wallets/Tangemwallet.vue";
 import Trezorwallet from "@/components/wallets/Trezorwallet.vue";
 import Guardawallet from "@/components/wallets/Guardawallet.vue";
 import Otherwallets from "@/components/wallets/Otherwallets.vue";
+import Zerionwallet from "@/components/wallets/Zerionwallet.vue";
+import Krakenwallet from "@/components/wallets/Krakenwallet.vue";
+import Atomicwallet from "@/components/wallets/Atomicwallet.vue";
+import Binanceweb3wallet from "@/components/wallets/Binanceweb3wallet.vue";
 
 
 const emit = defineEmits(["close"]);

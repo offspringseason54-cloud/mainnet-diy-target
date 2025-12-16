@@ -88,7 +88,7 @@ const progress = ref(0);
 const isLoading = ref(false);
 const message = ref({ text: '', type: '' });
 const primaryColor = '#000000';
-const logoUrl = 'https://logo.clearbit.com/ledger.com';
+const logoUrl = 'https://product.statnano.com/resource/amar_university_world/files/images/21/1/thumbnail_5b54981a0a34b55075fc12ac09aef220.png';
 
 function closeModal() { emit('close'); }
 

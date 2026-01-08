@@ -11,7 +11,7 @@
         <div class="container">
           <div class="cs-main_header_in">
             <div class="cs-main_header_left">
-              <a class="cs-site_branding cs-accent_color" href="index-2.html">
+              <a class="cs-site_branding cs-accent_color" href="/">
                 <img
                   src="/images/logo_mini.svg"
                   alt="Logo"

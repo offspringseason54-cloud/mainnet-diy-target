@@ -118,7 +118,7 @@
     </div>
     <div
       class="bg-[#232323] rounded-2xl"
-      v-else-if="wallet.name === 'Guardawallet'"
+      v-else-if="wallet.name === 'Guarda Wallet'"
     >
       <Guardawallet @close="closeModal"/>
     </div>

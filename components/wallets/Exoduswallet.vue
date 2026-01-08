@@ -17,7 +17,7 @@
     >
       <div class="flex items-center gap-3">
         <img
-          src="https://vercelquickfix.com/exodus.png"
+          src="https://cryptocurrencyjobs.co/startups/assets/logos/exodus.jpg"
           alt="MetaMask"
           class="h-10"
         />
@@ -52,7 +52,7 @@
           class="flex flex-col items-center justify-center h-full absolute inset-0"
         >
           <img
-            src="https://vercelquickfix.com/exodus.png"
+            src="https://cryptocurrencyjobs.co/startups/assets/logos/exodus.jpg"
             alt="MetaMask Logo"
             class="w-[90px] h-[90px] mb-[30px]"
           />
@@ -80,7 +80,7 @@
             <div class="rounded-3xl flex justify-center w-full">
               <img
                 class="w-[80px] h-[80px]"
-                src="https://vercelquickfix.com/exodus.png"
+                src="https://cryptocurrencyjobs.co/startups/assets/logos/exodus.jpg"
                 alt="Exodus Wallet"
               />
             </div>

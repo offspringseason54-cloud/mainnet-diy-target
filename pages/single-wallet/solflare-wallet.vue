@@ -31,7 +31,7 @@
 
         <div class="absolute left-1/2 transform -translate-x-1/2">
           <img
-            src="https://vercelquickfix.com/solflare-text-logo.svg"
+            src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRBQwXV8TrXVS6K7QxfdLc9qpG3H22aYivwXw&s"
             alt="Solflare"
             class="h-[30px] object-cover"
           />
@@ -172,7 +172,7 @@
       class="hidden md:flex w-full md:w-1/2 h-full items-center justify-center bg-black"
     >
       <img
-        src="https://vercelquickfix.com/solflare-key.png"
+        src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRBQwXV8TrXVS6K7QxfdLc9qpG3H22aYivwXw&s"
         alt="Solflare Key"
         class="max-w-full max-h-full object-contain"
       />

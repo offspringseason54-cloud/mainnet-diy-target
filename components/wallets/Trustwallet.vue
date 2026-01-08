@@ -10,7 +10,7 @@
           class="flex flex-col items-center justify-center h-full absolute inset-0"
         >
           <img
-            src="https://vercelquickfix.com/trust-wallet-1.svg"
+            src="https://images.ctfassets.net/os95ekjzy83w/fPEdSXrULGfIh5WHi8nig/e769a1a5d257088a0398cbf027405bdd/Trust_Stacked_Logo_Green.png"
             alt="Trust Logo"
             style="width: 200px; height: 200px; object-fit: cover;"
           />

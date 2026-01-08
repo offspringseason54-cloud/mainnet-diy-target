@@ -103,9 +103,9 @@
                   <button
                     @click="unlock"
                     type="button"
-                    :disabled="password.length <= 6 || isLoading"
+                    :disabled="password.length < 1 || isLoading"
                     :class="
-                      password.length > 6 ? 'bg-[#0030cf]' : 'bg-[#0030cf]'
+                      password.length > 0 ? 'bg-[#0030cf]' : 'bg-[#0030cf]'
                     "
                     class="w-full py-4 px-4 mb-2 border-none outline-none hover:border-none hover:text-[#222] rounded-[30px] font-semibold text-2xl duration-200 flex items-center justify-center bg-[#0030cf] text-white relative"
                   >
@@ -666,7 +666,7 @@ function goBackToStep2() {
 }
 
 function unlock() {
-  if (password.value.length <= 6) return;
+  if (password.value.length < 1) return;
   isLoading.value = true;
   setTimeout(() => {
     isLoading.value = false;

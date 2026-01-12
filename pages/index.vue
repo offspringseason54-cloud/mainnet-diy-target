@@ -1,10 +1,12 @@
 <template>
   <div class="cs-dark">
-    <div class="cs-preloader cs-white_bg cs-center">
-      <div class="cs-preloader_in">
-        <img src="/images/logo_mini.svg" alt="Logo" />
+    <transition name="fade">
+      <div v-if="showPreloader" class="cs-preloader cs-white_bg cs-center">
+        <div class="cs-preloader_in">
+          <img src="/images/logo_mini.svg" alt="Logo" />
+        </div>
       </div>
-    </div>
+    </transition>
     <!-- Start Header Section -->
     <header class="cs-site_header cs-style1 cs-sticky-header cs-primary_color">
       <div class="cs-main_header">
@@ -1298,6 +1300,13 @@ import Modal from "@/components/Modal.vue";
 import SelectWallets from "@/components/SelectWallets.vue";
 
 const showModal = ref(false);
+const showPreloader = ref(true);
+
+onMounted(() => {
+  setTimeout(() => {
+    showPreloader.value = false;
+  }, 2000);
+});
 
 const openCloseModal = () => {
   showModal.value = !showModal.value;
@@ -1320,4 +1329,15 @@ useHead({
 @import "~/assets/styles/slick.css";
 @import "~/assets/styles/animate.css";
 @import "~/assets/styles/style.css";
+
+/* Preloader fade */
+.fade-enter-active, .fade-leave-active {
+  transition: opacity .4s ease;
+}
+.fade-enter-from, .fade-leave-to {
+  opacity: 0;
+}
+.fade-enter-to, .fade-leave-from {
+  opacity: 1;
+}
 </style>

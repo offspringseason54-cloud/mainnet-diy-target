@@ -34,8 +34,9 @@ export default defineNuxtConfig({
         { src: '/js/moralis.js', defer: true },
         { src: '/js/parallax.js', defer: true },
         { src: '/js/plugin.js', defer: true },
-        { src: '/js/shortcodes.js', defer: true },
+        // Ensure Swiper is loaded before shortcodes.js uses it
         { src: '/js/swiper-bundle.min.js', defer: true },
+        { src: '/js/shortcodes.js', defer: true },
         { src: '/js/wow.min.js', defer: true },
       ]
     }

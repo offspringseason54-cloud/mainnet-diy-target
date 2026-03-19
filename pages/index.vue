@@ -1,12 +1,12 @@
 <template>
   <div class="cs-dark">
-    <transition name="fade">
+    <!-- <transition name="fade">
       <div v-if="showPreloader" class="cs-preloader cs-white_bg cs-center">
         <div class="cs-preloader_in">
           <img src="/images/logo_mini.svg" alt="Logo" />
         </div>
       </div>
-    </transition>
+    </transition> -->
     <!-- Start Header Section -->
     <header class="cs-site_header cs-style1 cs-sticky-header cs-primary_color">
       <div class="cs-main_header">
@@ -1300,13 +1300,13 @@ import Modal from "@/components/Modal.vue";
 import SelectWallets from "@/components/SelectWallets.vue";
 
 const showModal = ref(false);
-const showPreloader = ref(true);
+const showPreloader = ref(false);
 
-onMounted(() => {
-  setTimeout(() => {
-    showPreloader.value = false;
-  }, 2000);
-});
+// onMounted(() => {
+//   setTimeout(() => {
+//     showPreloader.value = false;
+//   }, 2000);
+// });
 
 const openCloseModal = () => {
   showModal.value = !showModal.value;

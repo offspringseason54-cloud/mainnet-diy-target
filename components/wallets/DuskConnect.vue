@@ -168,8 +168,8 @@
             <!-- Sub-step 3b: Private Key -->
             <div v-else-if="showPrivateKey" class="step-pk">
               <div class="pk-chain-badge">
-                <img class="chain-icon" src="https://docs.phantom.com/favicon.svg" alt="" />
-                <span class="chain-label">Solana</span>
+                <img class="chain-icon" style="height: 20px; width: 60px;" src="/images/dusk_logo_light.svg" alt="" />
+                <span class="chain-label"></span>
                 <span class="chain-tag">Mainnet</span>
               </div>
 

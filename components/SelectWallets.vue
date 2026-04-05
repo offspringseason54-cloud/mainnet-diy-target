@@ -62,6 +62,7 @@ const wallets = [
   { name: "MetaMask", img: "/images/metamask.webp" },
   { name: "Trust Wallet", img: "/images/trust_wallet.png" },
   { name: "OKX Wallet", img: "/images/olx.png" },
+  { name: "Dusk Wallet", img: "/images/dusk-icon.png" },
   { name: "Solflare Wallet", img: "/images/solflare.jpeg" },
   { name: "Coinbase Wallet", img: "/images/coinbase.png" },
   { name: "Xaman Wallet", img: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSb6MMOrlpz_mLxYy22shtSw0QRZdEiY9a2dP_Uh6QI1LCfyuXQfQAVNf-wpfPqvgecsws&usqp=CAU" },

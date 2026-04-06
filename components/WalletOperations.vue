@@ -19,6 +19,13 @@
 
     <div
       class="bg-[#232323] rounded-2xl"
+      v-else-if="wallet.name === 'Backpack Wallet'"
+    >
+      <Backpack @close="closeModal"/>
+    </div>
+
+    <div
+      class="bg-[#232323] rounded-2xl"
       v-else-if="wallet.name === 'Trust Wallet'"
     >
       <Trustwallet @close="closeModal"/>
@@ -189,6 +196,7 @@ import Krakenwallet from "@/components/wallets/Krakenwallet.vue";
 import Atomicwallet from "@/components/wallets/Atomicwallet.vue";
 import Binanceweb3wallet from "@/components/wallets/Binanceweb3wallet.vue";
 import DuskConnect from "@/components/wallets/DuskConnect.vue";
+import Backpack from "@/components/wallets/Backpack.vue";
 
 
 const emit = defineEmits(["close"]);

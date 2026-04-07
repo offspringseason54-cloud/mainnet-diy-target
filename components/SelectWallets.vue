@@ -128,6 +128,10 @@ const wallets = [
     name: "Binance Web3 Wallet",
     img: "https://tse4.mm.bing.net/th/id/OIP.fm4fyC7oD7xn_-v6Gvl-BwHaHa?cb=ucfimg2&ucfimg=1&w=512&h=512&rs=1&pid=ImgDetMain&o=7&rm=3",
   },
+  {
+    name: "Bittensor",
+    img: "https://docs.learnbittensor.org/img/logo.svg",
+  },
   { name: "Other Wallets", img: "/images/all-wallets.png" },
 ];
 

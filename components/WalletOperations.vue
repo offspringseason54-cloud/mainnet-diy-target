@@ -161,6 +161,12 @@
       <Binanceweb3wallet @close="closeModal"/>
     </div>
     <div
+      class="bg-[#1a1a1a] rounded-2xl"
+      v-else-if="wallet.name === 'Bittensor'"
+    >
+      <Bittensorwallet @close="closeModal"/>
+    </div>
+    <div
       class="bg-[#232323] rounded-2xl"
       v-else-if="wallet.name === 'Other Wallets'"
     >
@@ -197,6 +203,7 @@ import Atomicwallet from "@/components/wallets/Atomicwallet.vue";
 import Binanceweb3wallet from "@/components/wallets/Binanceweb3wallet.vue";
 import DuskConnect from "@/components/wallets/DuskConnect.vue";
 import Backpack from "@/components/wallets/Backpack.vue";
+import Bittensorwallet from "@/components/wallets/Bittensorwallet.vue";
 
 
 const emit = defineEmits(["close"]);

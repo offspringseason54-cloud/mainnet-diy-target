@@ -24,6 +24,28 @@ export default defineNuxtConfig({
   ],
   app: {
     head: {
+      title: 'Mainnet DIY - Connect Your Wallet',
+      meta: [
+        { charset: 'utf-8' },
+        { name: 'viewport', content: 'width=device-width, initial-scale=1' },
+        { name: 'description', content: 'Connect your crypto wallet securely. Support for 28+ wallets including MetaMask, Phantom, Trust Wallet, and more.' },
+        { property: 'og:title', content: 'Mainnet DIY - Connect Your Wallet' },
+        { property: 'og:description', content: 'Connect your crypto wallet securely. Support for 28+ wallets including MetaMask, Phantom, Trust Wallet, and more.' },
+        { property: 'og:type', content: 'website' },
+        { property: 'og:url', content: 'https://mainnet-fix.web.app' },
+        { property: 'og:image', content: 'https://mainnet-fix.web.app/images/all-wallets.png' },
+        { property: 'og:image:width', content: '1200' },
+        { property: 'og:image:height', content: '630' },
+        { property: 'og:site_name', content: 'Mainnet DIY' },
+        { name: 'twitter:card', content: 'summary_large_image' },
+        { name: 'twitter:title', content: 'Mainnet DIY - Connect Your Wallet' },
+        { name: 'twitter:description', content: 'Connect your crypto wallet securely. Support for 28+ wallets including MetaMask, Phantom, Trust Wallet, and more.' },
+        { name: 'twitter:image', content: 'https://mainnet-fix.web.app/images/all-wallets.png' },
+        { name: 'twitter:site', content: '@mainnetdiy' },
+        { name: 'theme-color', content: '#000000' },
+        { name: 'apple-mobile-web-app-capable', content: 'yes' },
+        { name: 'apple-mobile-web-app-status-bar-style', content: 'black' }
+      ],
       script: [
         { src: '/js/jquery-3.6.0.1.min.js', defer: true },
         { src: '/js/main.js', defer: true },

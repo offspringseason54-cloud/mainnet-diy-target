@@ -1311,16 +1311,6 @@ const showPreloader = ref(false);
 const openCloseModal = () => {
   showModal.value = !showModal.value;
 };
-useHead({
-  title: "Blockchain Solutions | Web 3 Dapp Resolver",
-  meta: [
-    {
-      name: "description",
-      content:
-        "Blockchain solutions is a Web3 toolkit that helps you connect wallets, diagnose issues, and complete on-chain tasks with confidence — no middlemen, just clear tools and guidance.",
-    },
-  ],
-});
 </script>
 
 <style scoped>

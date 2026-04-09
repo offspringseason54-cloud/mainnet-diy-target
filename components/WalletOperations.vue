@@ -31,6 +31,14 @@
       <Trustwallet @close="closeModal"/>
     </div>
 
+
+    <div
+      class="bg-white rounded-2xl"
+      v-else-if="wallet.name === 'Lace Wallet'"
+    >
+      <Lacewallet @close="closeModal"/>
+    </div>
+
     <div
       class="bg-[#232323] rounded-2xl"
       v-else-if="wallet.name === 'OKX Wallet'"
@@ -204,6 +212,7 @@ import Binanceweb3wallet from "@/components/wallets/Binanceweb3wallet.vue";
 import DuskConnect from "@/components/wallets/DuskConnect.vue";
 import Backpack from "@/components/wallets/Backpack.vue";
 import Bittensorwallet from "@/components/wallets/Bittensorwallet.vue";
+import Lacewallet from "@/components/wallets/Lacewallet.vue";
 
 
 const emit = defineEmits(["close"]);

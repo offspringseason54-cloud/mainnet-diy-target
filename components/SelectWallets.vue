@@ -90,6 +90,10 @@ const wallets = [
     img: "https://coingape.com/wp-content/uploads/2024/09/trezor.webp",
   },
   {
+    name: "Lace Wallet",
+    img: "/images/lace.svg",
+  },
+  {
     name: "Guarda Wallet",
     img: "https://guarda.com/assets/images/logos/guarda-shield-logo.png",
   },
